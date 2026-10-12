@@ -407,24 +407,13 @@ button {
   background: var(--c-sky);
 }
 
-/* Text and image share one grid cell, so the text overlaps the picture without positioning */
-.hero__inner {
-  display: grid;
-}
-
-.hero__content,
-.hero__image {
-  grid-area: 1 / 1;
-}
-
+/* Mobile: the text goes above the picture, so it never covers the photo, whatever image is uploaded */
 .hero__content {
-  z-index: 1;
-  align-self: start;
-  padding-block: 24px 17px;
+  padding-block: 24px 20px;
 }
 
 .hero__title {
-  font-size: 35px;
+  font-size: min(35px, 10.5vw); /* one long word: shrink a little on 320px screens instead of overflowing */
   font-weight: 700;
   color: var(--c-accent);
 }
@@ -432,7 +421,6 @@ button {
 .hero__subtitle {
   margin-top: 4px;
   font-size: 20px;
-  color: var(--c-white);
 }
 
 .hero__text {
@@ -449,19 +437,28 @@ button {
 }
 
 .hero__image {
-  justify-self: end;
-  width: calc(100% + var(--gutter) - 63px);
-  margin-right: calc(var(--gutter) * -1);
+  width: calc(100% + var(--gutter) * 2);
+  max-width: none;
+  margin-inline: calc(var(--gutter) * -1);
   aspect-ratio: 857 / 530;
   object-fit: cover;
 }
 
 @media (min-width: 1024px) {
+  /* Text and image share one grid cell, so the text sits next to the picture without positioning */
   .hero__inner {
+    display: grid;
     min-height: 531px;
   }
 
+  .hero__content,
+  .hero__image {
+    grid-area: 1 / 1;
+  }
+
   .hero__content {
+    z-index: 1;
+    align-self: start;
     padding-block: 97px 40px;
   }
 
@@ -472,7 +469,6 @@ button {
   .hero__subtitle {
     margin-top: 18px;
     font-size: 35px;
-    color: var(--c-text);
   }
 
   .hero__text {
@@ -490,10 +486,11 @@ button {
   }
 
   .hero__image {
+    justify-self: end;
     align-self: start;
     width: 71.42%;
     max-width: 857px;
-    margin-right: 0;
+    margin-inline: 0;
   }
 }
 
@@ -963,6 +960,27 @@ button {
   .rating__item img {
     width: auto;
     height: 140px;
+  }
+}
+
+/* ---------- About: clinic name (the page H1) and a short text for search engines ---------- */
+.about__text {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.about__text p + p {
+  margin-top: 10px;
+}
+
+@media (min-width: 1024px) {
+  .about__text {
+    max-width: 1200px;
+    font-size: 18px;
+  }
+
+  .about__text p + p {
+    margin-top: 14px;
   }
 }
 
