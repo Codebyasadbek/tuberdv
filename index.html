@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Многопрофильная клиника «Тубер» в Хабаровске</title>
+  <meta name="description" content="Многопрофильная клиника «Тубер» в Хабаровске: приём врачей, УЗИ, флюорография, маммография, дневной стационар.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto+Condensed&family=Roboto:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="header" data-header>
+    <div class="header__top">
+      <div class="container header__top-inner">
+        <div class="contact contact--phone header__contact">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+
+        <div class="contact contact--address header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+
+        <div class="contact header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+
+        <a class="btn btn--accent header__cta" href="#appointment">Записаться на приём</a>
+
+        <button class="icon-btn header__a11y header__a11y--mobile" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+        <button class="header__burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="header-menu" data-menu-toggle>
+          <img src="assets/icons/burger.svg" width="50" height="12" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="header__main" id="header-menu">
+      <div class="container header__main-inner">
+        <a class="logo header__logo" href="/">
+          <img src="assets/img/logo.png" width="138" height="42" alt="Многопрофильная клиника «Тубер»">
+        </a>
+
+        <nav class="nav header__nav" aria-label="Основное меню">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="/uslugi">Услуги</a></li>
+            <li><a class="nav__link" href="/vrachi">Врачи</a></li>
+            <li><a class="nav__link" href="/diagnostika">Диагностика</a></li>
+            <li><a class="nav__link" href="/inektsii">Инъекции</a></li>
+            <li><a class="nav__link" href="/prajs">Цены</a></li>
+            <li><a class="nav__link" href="/kontakty">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <button class="icon-btn header__a11y" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+
+        <form class="search header__search" action="/" method="get" role="search">
+          <input class="search__input" type="search" name="s" placeholder="Поиск" aria-label="Поиск по сайту">
+          <button class="search__btn" type="submit" aria-label="Найти">
+            <img src="assets/icons/search.svg" width="21.4715" height="22.4491" alt="">
+          </button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <h1 class="hero__title">ФЛЮОРОГРАФИЯ</h1>
+          <p class="hero__subtitle">Цифровой малодозовый аппарат</p>
+          <p class="hero__text">Готовы проверить лёгкие?<br>Запишитесь уже сегодня</p>
+          <a class="btn btn--primary hero__btn" href="/diagnostika/flyuorografiya">Узнать больше</a>
+        </div>
+        <img class="hero__image" src="assets/img/hero-fluorography.png" width="857" height="530" alt="Цифровой малодозовый флюорограф">
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <h2 class="section__title">Услуги</h2>
+
+        <div class="services__tabs" data-tabs>
+          <button class="services__tab" type="button" aria-expanded="true" aria-controls="services-directions" data-tab>Направления</button>
+          <div class="services__panel" id="services-directions" data-tab-panel>
+            <ul class="services__list">
+              <li><a href="/vrachi/infektsionist">Инфекционист</a></li>
+              <li><a href="/vrachi/kardiolog">Кардиолог</a></li>
+              <li><a href="/vrachi/nejrokhirurg">Нейрохирург</a></li>
+              <li><a href="/vrachi/terapevt">Терапевт</a></li>
+              <li><a href="/vrachi/endokrinolog">Эндокринолог</a></li>
+            </ul>
+          </div>
+
+          <button class="services__tab" type="button" aria-expanded="false" aria-controls="services-diagnostics" data-tab>Диагностика</button>
+          <div class="services__panel" id="services-diagnostics" data-tab-panel hidden>
+            <ul class="services__list">
+              <li><a href="/vrachi/uzi">УЗИ, ультразвуковые исследования</a></li>
+              <li><a href="/vrachi/uzi-serdtsa">УЗИ сердца</a></li>
+              <li><a href="/diagnostika/flyuorografiya">Флюорография</a></li>
+              <li><a href="/diagnostika/mammografiya">Маммография</a></li>
+              <li><a href="/vrachi/uzi-shchitovidnoj-zhelezy-i-parashchitovidnykh-zhelez">УЗИ щитовидной железы</a></li>
+            </ul>
+          </div>
+
+          <button class="services__tab" type="button" aria-expanded="false" aria-controls="services-day-hospital" data-tab>Дневной стационар</button>
+          <div class="services__panel" id="services-day-hospital" data-tab-panel hidden>
+            <ul class="services__list">
+              <li><a href="/dnevnoj-statsionar/kapelnitsy">Капельницы</a></li>
+              <li><a href="/inektsii">Инъекции</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section doctors" id="doctors">
+      <div class="container">
+        <h2 class="section__title">Врачи</h2>
+
+        <div class="swiper doctors__slider" data-doctors-slider>
+          <ul class="swiper-wrapper doctors__list">
+            <li class="swiper-slide doctor-card">
+              <img class="doctor-card__photo" src="assets/img/doctors/doctor-1.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
+              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
+              <p class="doctor-card__position">Врач-кардиолог</p>
+              <ul class="doctor-card__facts">
+                <li>высшая категория</li>
+                <li>опыт работы более 20 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 2500 р</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+            </li>
+            <li class="swiper-slide doctor-card">
+              <img class="doctor-card__photo" src="assets/img/doctors/doctor-2.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
+              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
+              <p class="doctor-card__position">Врач-кардиолог</p>
+              <ul class="doctor-card__facts">
+                <li>высшая категория</li>
+                <li>опыт работы более 20 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 2500 р</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+            </li>
+            <li class="swiper-slide doctor-card">
+              <img class="doctor-card__photo" src="assets/img/doctors/doctor-3.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
+              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
+              <p class="doctor-card__position">Врач-кардиолог</p>
+              <ul class="doctor-card__facts">
+                <li>высшая категория</li>
+                <li>опыт работы более 20 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 2500 р</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+            </li>
+            <li class="swiper-slide doctor-card">
+              <img class="doctor-card__photo" src="assets/img/doctors/doctor-4.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
+              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
+              <p class="doctor-card__position">Врач-кардиолог</p>
+              <ul class="doctor-card__facts">
+                <li>высшая категория</li>
+                <li>опыт работы более 20 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 2500 р</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+            </li>
+            <li class="swiper-slide doctor-card">
+              <img class="doctor-card__photo" src="assets/img/doctors/doctor-5.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
+              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
+              <p class="doctor-card__position">Врач-кардиолог</p>
+              <ul class="doctor-card__facts">
+                <li>высшая категория</li>
+                <li>опыт работы более 20 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 2500 р</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+            </li>
+          </ul>
+          <img class="doctors__hint" src="assets/icons/swipe-hand.svg" width="40" height="40" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="section appointment" id="appointment">
+      <div class="container">
+        <div class="appointment__box">
+          <div class="appointment__intro">
+            <h2 class="appointment__title">Запишитесь на приём</h2>
+            <p class="appointment__text">Оставьте свой номер телефона — мы перезвоним.</p>
+            <p class="appointment__text appointment__text--wide">Ответим на вопросы, подберём удобное время и запишем на приём</p>
+          </div>
+
+          <form class="form appointment__form" action="#" method="post">
+            <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name" aria-label="Имя" required>
+            <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" inputmode="tel" aria-label="Телефон" required>
+            <label class="form__consent">
+              <input class="form__checkbox" type="checkbox" name="consent" required>
+              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="/reglament-o-zashchite-dannykh">Политикой в отношении обработки персональных данных</a> и даю <a href="/soglasie-na-obrabotku-dannykh">Согласие на обработку персональных данных</a></span>
+            </label>
+            <button class="btn btn--primary form__submit" type="submit">Записаться на приём</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section documents" id="documents">
+      <div class="container">
+        <h2 class="section__title">Документы</h2>
+
+        <div class="documents__layout">
+          <div class="documents__slider">
+            <div class="swiper" data-documents-slider>
+              <ul class="swiper-wrapper documents__list">
+                <li class="swiper-slide document-card">
+                  <a class="document-card__link" href="assets/img/documents/egrul.jpg" target="_blank" rel="noopener">
+                    <img src="assets/img/documents/egrul.jpg" width="600" height="849" alt="Выписка из ЕГРЮЛ" loading="lazy">
+                  </a>
+                </li>
+                <li class="swiper-slide document-card">
+                  <a class="document-card__link" href="assets/img/documents/poryadok-uslug.jpg" target="_blank" rel="noopener">
+                    <img src="assets/img/documents/poryadok-uslug.jpg" width="600" height="844" alt="Порядок оказания платных медицинских услуг" loading="lazy">
+                  </a>
+                </li>
+                <li class="swiper-slide document-card">
+                  <a class="document-card__link" href="assets/img/documents/license-1.jpg" target="_blank" rel="noopener">
+                    <img src="assets/img/documents/license-1.jpg" width="600" height="832" alt="Лицензия на медицинскую деятельность, страница 1" loading="lazy">
+                  </a>
+                </li>
+                <li class="swiper-slide document-card">
+                  <a class="document-card__link" href="assets/img/documents/license-2.jpg" target="_blank" rel="noopener">
+                    <img src="assets/img/documents/license-2.jpg" width="600" height="832" alt="Лицензия на медицинскую деятельность, страница 2" loading="lazy">
+                  </a>
+                </li>
+                <li class="swiper-slide document-card">
+                  <a class="document-card__link" href="assets/img/documents/license-3.jpg" target="_blank" rel="noopener">
+                    <img src="assets/img/documents/license-3.jpg" width="600" height="832" alt="Лицензия на медицинскую деятельность, страница 3" loading="lazy">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="documents__nav">
+              <button class="slider-arrow slider-arrow--prev" type="button" aria-label="Предыдущий документ" data-documents-prev>
+                <img src="assets/icons/arrow.svg" width="60" height="14.7279" alt="">
+              </button>
+              <button class="slider-arrow" type="button" aria-label="Следующий документ" data-documents-next>
+                <img src="assets/icons/arrow.svg" width="60" height="14.7279" alt="">
+              </button>
+            </div>
+          </div>
+
+          <img class="documents__photo" src="assets/img/documents-photo.png" width="471" height="384" alt="Врач консультирует пациентку">
+        </div>
+      </div>
+    </section>
+
+    <section class="section rating" id="rating">
+      <div class="container">
+        <h2 class="section__title">Рейтинг клиники</h2>
+
+        <ul class="rating__list">
+          <li><a class="rating__item" href="#" target="_blank" rel="noopener"><img src="assets/img/rating-prodoctorov.png" width="265" height="140" alt="ПроДокторов — оценка 5"></a></li>
+          <li><a class="rating__item" href="#" target="_blank" rel="noopener"><img src="assets/img/rating-yandex.png" width="262" height="140" alt="Яндекс — оценка 4,9"></a></li>
+          <li><a class="rating__item" href="#" target="_blank" rel="noopener"><img src="assets/img/rating-napopravku.png" width="263" height="140" alt="НаПоправку — оценка 4,9"></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="/">
+          <img src="assets/img/logo.png" width="164" height="50" alt="Многопрофильная клиника «Тубер»">
+        </a>
+        <a class="btn btn--accent footer__btn" href="#appointment">Консультация</a>
+      </div>
+
+      <nav class="footer__nav" aria-label="Меню в подвале">
+        <ul class="footer__menu">
+          <li><a href="/vrachi">Врачи</a></li>
+          <li><a href="/otdeleniya">Отделения</a></li>
+          <li><a href="/prajs">Цены</a></li>
+        </ul>
+        <ul class="footer__menu">
+          <li><a href="/kontakty">Контакты</a></li>
+          <li><a href="/dokumenty">Документы</a></li>
+          <li><a href="/karta-sajta">Карта сайта</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contacts">
+        <div class="contact contact--phone">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+        <div class="contact contact--address">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+        <div class="contact contact--hours">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="footer__map" href="https://yandex.ru/maps/?text=Хабаровск, ул. Ленинградская, 53" target="_blank" rel="noopener">
+        <img src="assets/img/footer-map.png" width="302" height="171" alt="Клиника на карте: г. Хабаровск, ул. Ленинградская, 53">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
