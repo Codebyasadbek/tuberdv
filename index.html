@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Многопрофильная клиника «Тубер» в Хабаровске</title>
-  <meta name="description" content="Многопрофильная клиника «Тубер» в Хабаровске: приём врачей, УЗИ, флюорография, маммография, дневной стационар.">
+  <meta name="description" content="Многопрофильная клиника «Тубер» в Хабаровске: приём врачей, УЗИ, ЭКГ, флюорография, маммография, анализы, процедурный кабинет.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto+Condensed&family=Roboto:wght@400;600;700&display=swap">
@@ -45,24 +45,28 @@
         <button class="icon-btn header__a11y header__a11y--mobile" type="button" aria-label="Версия для слабовидящих">
           <img src="assets/icons/eye.svg" width="26" height="26" alt="">
         </button>
-        <button class="header__burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="header-menu" data-menu-toggle>
+        <button class="header__burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
           <img src="assets/icons/burger.svg" width="50" height="12" alt="">
         </button>
       </div>
     </div>
 
-    <div class="header__main" id="header-menu">
+    <div class="header__main">
       <div class="container header__main-inner">
+        <button class="icon-btn menu-btn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span class="menu-btn__lines" aria-hidden="true"></span>
+        </button>
+
         <a class="logo header__logo" href="/">
           <img src="assets/img/logo.png" width="195" height="60" alt="Многопрофильная клиника «Тубер»">
         </a>
 
         <nav class="nav header__nav" aria-label="Основное меню">
           <ul class="nav__list">
-            <li><a class="nav__link" href="/uslugi">Услуги</a></li>
+            <li><a class="nav__link" href="/o-tsentre">О центре</a></li>
             <li><a class="nav__link" href="/vrachi">Врачи</a></li>
             <li><a class="nav__link" href="/diagnostika">Диагностика</a></li>
-            <li><a class="nav__link" href="/inektsii">Инъекции</a></li>
+            <li><a class="nav__link" href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
             <li><a class="nav__link" href="/prajs">Цены</a></li>
             <li><a class="nav__link" href="/kontakty">Контакты</a></li>
           </ul>
@@ -80,6 +84,20 @@
         </form>
       </div>
     </div>
+
+    <!-- Dropdown menu over the page: opened by the burger (mobile) and the square menu button (desktop) -->
+    <nav class="menu" id="site-menu" aria-label="Меню сайта">
+      <ul class="menu__list">
+        <li><a class="menu__link" href="/o-tsentre">О центре</a></li>
+        <li><a class="menu__link" href="/uslugi">Услуги</a></li>
+        <li><a class="menu__link" href="/vrachi">Врачи</a></li>
+        <li><a class="menu__link" href="/diagnostika">Диагностика</a></li>
+        <li><a class="menu__link" href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
+        <li><a class="menu__link" href="/prajs">Цены</a></li>
+        <li><a class="menu__link" href="/informatsiya-dlya-patsientov">Информация для пациентов</a></li>
+        <li><a class="menu__link" href="/kontakty">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -114,7 +132,7 @@
             <div class="container hero__inner">
               <div class="hero__content">
                 <p class="hero__title">ПРИЁМ ВРАЧЕЙ</p>
-                <p class="hero__subtitle">Терапевт, невролог, ЛОР</p>
+                <p class="hero__subtitle">Терапевт, кардиолог, эндокринолог</p>
                 <p class="hero__text">Опытные специалисты<br>в центре города</p>
                 <a class="btn btn--primary hero__btn" href="/vrachi">Узнать больше</a>
               </div>
@@ -158,33 +176,33 @@
         <h2 class="section__title">Услуги</h2>
 
         <div class="services__tabs" data-tabs>
-          <button class="services__tab" type="button" aria-expanded="true" aria-controls="services-directions" data-tab>Направления</button>
-          <div class="services__panel" id="services-directions" data-tab-panel>
+          <button class="services__tab" type="button" aria-expanded="true" aria-controls="services-medical" data-tab>Медицинские услуги</button>
+          <div class="services__panel" id="services-medical" data-tab-panel>
+            <ul class="services__list">
+              <li><a href="/diagnostika/mammografiya">Маммография</a></li>
+              <li><a href="/diagnostika/flyuorografiya">Флюорография</a></li>
+              <li><a href="/diagnostika/uzi">УЗИ</a></li>
+              <li><a href="/diagnostika/ekg">ЭКГ</a></li>
+              <li><a href="/analizy">Анализы</a></li>
+              <li><a href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
+            </ul>
+            <p class="services__subtitle">Приём ведут специалисты:</p>
             <ul class="services__list">
               <li><a href="/vrachi/infektsionist">Инфекционист</a></li>
               <li><a href="/vrachi/kardiolog">Кардиолог</a></li>
               <li><a href="/vrachi/nejrokhirurg">Нейрохирург</a></li>
               <li><a href="/vrachi/terapevt">Терапевт</a></li>
               <li><a href="/vrachi/endokrinolog">Эндокринолог</a></li>
+              <li><a href="/vrachi/rentgenolog">Рентгенолог</a></li>
+              <li><a href="/vrachi/uzi">Врач УЗИ</a></li>
             </ul>
           </div>
 
-          <button class="services__tab" type="button" aria-expanded="false" aria-controls="services-diagnostics" data-tab>Диагностика</button>
-          <div class="services__panel" id="services-diagnostics" data-tab-panel hidden>
+          <button class="services__tab" type="button" aria-expanded="false" aria-controls="services-procedure" data-tab>Процедурный кабинет</button>
+          <div class="services__panel" id="services-procedure" data-tab-panel hidden>
             <ul class="services__list">
-              <li><a href="/vrachi/uzi">УЗИ, ультразвуковые исследования</a></li>
-              <li><a href="/vrachi/uzi-serdtsa">УЗИ сердца</a></li>
-              <li><a href="/diagnostika/flyuorografiya">Флюорография</a></li>
-              <li><a href="/diagnostika/mammografiya">Маммография</a></li>
-              <li><a href="/vrachi/uzi-shchitovidnoj-zhelezy-i-parashchitovidnykh-zhelez">УЗИ щитовидной железы</a></li>
-            </ul>
-          </div>
-
-          <button class="services__tab" type="button" aria-expanded="false" aria-controls="services-day-hospital" data-tab>Дневной стационар</button>
-          <div class="services__panel" id="services-day-hospital" data-tab-panel hidden>
-            <ul class="services__list">
-              <li><a href="/dnevnoj-statsionar/kapelnitsy">Капельницы</a></li>
-              <li><a href="/inektsii">Инъекции</a></li>
+              <li><a href="/protsedurnyj-kabinet/inektsii">Инъекции</a></li>
+              <li><a href="/protsedurnyj-kabinet/kapelnitsy">Капельницы</a></li>
             </ul>
           </div>
         </div>
@@ -347,7 +365,7 @@
         <h1 class="section__title">Многопрофильная клиника «Тубер» в Хабаровске</h1>
         <div class="about__text">
           <p>Почему тысячи пациентов выбирают «Тубер»? Потому что в нашей клинике их ждут высококвалифицированные врачи, современная диагностика, передовые методики, а главное — забота и внимание сотрудников.</p>
-          <p>Приём врачей, УЗИ, флюорография, маммография, дневной стационар и более 300 видов анализов в центре Хабаровска, на Ленинградской, 53. Быстро и без очередей.</p>
+          <p>Приём врачей, УЗИ, ЭКГ, флюорография, маммография, процедурный кабинет и более 300 видов анализов в центре Хабаровска, на Ленинградской, 53. Быстро и без очередей.</p>
         </div>
       </div>
     </section>

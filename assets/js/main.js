@@ -1,28 +1,29 @@
 (() => {
   const desktop = window.matchMedia("(min-width: 1024px)");
 
-  /* ---------- Mobile menu ---------- */
+  /* ---------- Dropdown menu: burger on mobile, square menu button on desktop ---------- */
   const header = document.querySelector("[data-header]");
-  const menuToggle = header?.querySelector("[data-menu-toggle]");
+  const menuToggles = header ? [...header.querySelectorAll("[data-menu-toggle]")] : [];
 
+  const isMenuOpen = () => header.classList.contains("is-menu-open");
   const setMenu = (open) => {
     header.classList.toggle("is-menu-open", open);
-    menuToggle.setAttribute("aria-expanded", String(open));
+    menuToggles.forEach((toggle) => toggle.setAttribute("aria-expanded", String(open)));
   };
 
-  if (menuToggle) {
-    menuToggle.addEventListener("click", () => setMenu(!header.classList.contains("is-menu-open")));
-    header.querySelectorAll(".nav__link").forEach((link) => link.addEventListener("click", () => setMenu(false)));
+  if (menuToggles.length) {
+    menuToggles.forEach((toggle) => toggle.addEventListener("click", () => setMenu(!isMenuOpen())));
+    header.querySelectorAll(".menu__link").forEach((link) => link.addEventListener("click", () => setMenu(false)));
     desktop.addEventListener("change", () => setMenu(false));
 
     // The menu is an overlay: close it on a click outside the header and on Escape
     document.addEventListener("click", (event) => {
-      if (header.classList.contains("is-menu-open") && !header.contains(event.target)) setMenu(false);
+      if (isMenuOpen() && !header.contains(event.target)) setMenu(false);
     });
     document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && header.classList.contains("is-menu-open")) {
+      if (event.key === "Escape" && isMenuOpen()) {
         setMenu(false);
-        menuToggle.focus();
+        menuToggles.find((toggle) => toggle.offsetParent)?.focus(); // the button visible at this width
       }
     });
   }

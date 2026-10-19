@@ -230,52 +230,92 @@ button {
   margin-left: 20px;
 }
 
-/* Mobile: second row turns into a dropdown panel over the page */
+/* Second row (logo, menu, search) is desktop only; on mobile the burger opens the dropdown menu */
 .header__main {
   display: none;
-  position: absolute;
-  top: calc(100% + 10px);
-  right: var(--gutter);
-}
-
-.header.is-menu-open .header__main {
-  display: block;
 }
 
 .header__main-inner {
   display: flex;
-  padding: 0;
 }
 
-.header__main .header__logo,
-.header__main .header__a11y,
-.header__main .header__search {
+.nav__list {
+  display: flex;
+}
+
+.nav__link {
+  white-space: nowrap;
+}
+
+.nav__link,
+.menu__link {
+  font-size: 18px;
+  color: var(--c-primary);
+  transition: color 0.2s;
+}
+
+.nav__link:hover,
+.menu__link:hover {
+  color: var(--c-accent);
+}
+
+/* Square menu button: three lines that turn into a cross while the menu is open */
+.menu-btn__lines,
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--c-primary);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  content: "";
+  transform: translateY(-6px);
+}
+
+.menu-btn__lines::after {
+  transform: translateY(4px);
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__lines {
+  background: transparent;
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__lines::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.menu-btn[aria-expanded="true"] .menu-btn__lines::after {
+  transform: translateY(-2px) rotate(-45deg);
+}
+
+/* Dropdown menu: an overlay panel, it never pushes the page down */
+.menu {
   display: none;
-}
-
-.nav {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: var(--gutter);
   width: 312px;
   max-width: calc(100vw - var(--gutter) * 2);
   padding: 30px 26px 20px;
   border: 1px solid var(--c-sky);
   border-radius: var(--radius);
   background: var(--c-pale);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
 }
 
-.nav__list {
+.header.is-menu-open .menu {
+  display: block;
+}
+
+.menu__list {
   display: flex;
   flex-direction: column;
   gap: 10px;
-}
-
-.nav__link {
-  font-size: 18px;
-  color: var(--c-primary);
-  transition: color 0.2s;
-}
-
-.nav__link:hover {
-  color: var(--c-accent);
 }
 
 .search {
@@ -340,10 +380,8 @@ button {
     display: none;
   }
 
-  .header__main,
-  .header.is-menu-open .header__main {
+  .header__main {
     display: block;
-    position: static;
   }
 
   .header__main-inner {
@@ -351,41 +389,42 @@ button {
     padding: 12px var(--gutter);
   }
 
-  .header__main .header__logo {
-    display: block;
+  .menu-btn {
+    margin-right: 20px;
   }
 
   /* Larger logo at the client's request; a bit smaller on narrow desktops so the menu still fits */
-  .header__main .header__logo img {
+  .header__logo img {
     width: clamp(138px, 13vw, 195px);
   }
 
-  .header__main .header__a11y {
-    display: inline-flex;
-    margin-left: 13px;
-  }
-
-  .header__main .header__search {
-    display: flex;
+  .header__main .header__a11y,
+  .header__search {
     margin-left: 13px;
   }
 
   .header__nav {
-    align-self: center;
     margin-left: auto;
   }
 
-  .nav {
-    width: auto;
-    max-width: none;
-    padding: 0;
-    border: 0;
-    background: none;
+  /* Narrow desktops (1024–1239px): smaller menu text and search so the row fits */
+  .nav__list {
+    gap: 14px;
   }
 
-  .nav__list {
-    flex-direction: row;
-    gap: 24px;
+  .nav__link {
+    font-size: 15px;
+  }
+
+  .header__search {
+    width: 170px;
+  }
+
+  /* The dropdown opens under the menu button, at the left edge of the content */
+  .menu {
+    top: 100%;
+    right: auto;
+    left: max(var(--gutter), calc((100% - 1200px) / 2));
   }
 }
 
@@ -398,12 +437,16 @@ button {
     padding-left: calc(var(--gutter) + 103px);
   }
 
-  .header__nav {
-    flex: 0 1 637px;
+  .nav__list {
+    gap: 16px;
   }
 
-  .nav__list {
-    justify-content: space-between;
+  .nav__link {
+    font-size: 18px;
+  }
+
+  .header__search {
+    width: 215px;
   }
 }
 
@@ -598,12 +641,18 @@ button {
   color: var(--c-primary);
 }
 
+.services__subtitle {
+  margin-block: 24px 10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
 @media (min-width: 1024px) {
+  /* Tabs in one row, a third of the width each; the open panel sits under its own tab */
   .services__tabs {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0 20px;
-    border-radius: var(--radius);
-    background: var(--c-pale);
+    grid-auto-columns: minmax(0, 1fr);
+    gap: 20px;
   }
 
   .services__tab {
@@ -613,9 +662,15 @@ button {
 
   .services__panel {
     grid-row: 2;
-    grid-column: 1 / -1;
-    padding: 35px 31px;
-    background: none;
+    padding: 30px 40px;
+  }
+
+  .services__panel:nth-of-type(2) {
+    grid-column: 2;
+  }
+
+  .services__panel:nth-of-type(3) {
+    grid-column: 3;
   }
 }
 
