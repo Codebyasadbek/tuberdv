@@ -60,6 +60,18 @@
   /* ---------- Sliders (Swiper) ---------- */
   // slidesPerView: "auto" — slide widths are set in CSS, so any number of cards from the CMS fits
   if (window.Swiper) {
+    const hero = document.querySelector("[data-hero-slider]");
+    if (hero) {
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      new Swiper(hero, {
+        loop: true,
+        grabCursor: true,
+        watchOverflow: true,
+        autoplay: reduceMotion ? false : { delay: 6000, pauseOnMouseEnter: true, disableOnInteraction: false },
+        pagination: { el: document.querySelector("[data-hero-pagination]"), clickable: true, bulletElement: "button" },
+      });
+    }
+
     const doctors = document.querySelector("[data-doctors-slider]");
     if (doctors) {
       new Swiper(doctors, {

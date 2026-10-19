@@ -347,12 +347,17 @@ button {
   }
 
   .header__main-inner {
-    align-items: flex-start;
-    padding: 20px var(--gutter) 17px;
+    align-items: center;
+    padding: 12px var(--gutter);
   }
 
   .header__main .header__logo {
     display: block;
+  }
+
+  /* Larger logo at the client's request; a bit smaller on narrow desktops so the menu still fits */
+  .header__main .header__logo img {
+    width: clamp(138px, 13vw, 195px);
   }
 
   .header__main .header__a11y {
@@ -404,10 +409,26 @@ button {
 
 /* ---------- Hero ---------- */
 .hero {
+  --swiper-pagination-color: var(--c-primary);
+  --swiper-pagination-bullet-inactive-color: var(--c-primary);
+  --swiper-pagination-bullet-inactive-opacity: 0.3;
+  --swiper-pagination-bullet-size: 10px;
+  --swiper-pagination-bullet-horizontal-gap: 5px;
   background: var(--c-sky);
 }
 
+/* All slides take the height of the tallest one, so the page does not jump while they change */
+.hero__slide {
+  display: flex;
+  height: auto;
+}
+
 /* Mobile: the text goes above the picture, so it never covers the photo, whatever image is uploaded */
+.hero__inner {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero__content {
   padding-block: 24px 20px;
 }
@@ -439,9 +460,15 @@ button {
 .hero__image {
   width: calc(100% + var(--gutter) * 2);
   max-width: none;
-  margin-inline: calc(var(--gutter) * -1);
+  margin: auto calc(var(--gutter) * -1) 0; /* pinned to the bottom when a neighbour slide has more text */
   aspect-ratio: 857 / 530;
   object-fit: cover;
+}
+
+.hero__pagination {
+  display: flex;
+  justify-content: center;
+  padding-block: 12px;
 }
 
 @media (min-width: 1024px) {
@@ -490,7 +517,10 @@ button {
     align-self: start;
     width: 71.42%;
     max-width: 857px;
-    margin-inline: 0;
+    margin: 0;
+    /* The title runs over the left edge of the photo: fade that edge into the background so any photo stays readable */
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 30%);
+    mask-image: linear-gradient(to right, transparent, #000 30%);
   }
 }
 

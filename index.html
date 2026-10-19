@@ -54,7 +54,7 @@
     <div class="header__main" id="header-menu">
       <div class="container header__main-inner">
         <a class="logo header__logo" href="/">
-          <img src="assets/img/logo.png" width="138" height="42" alt="Многопрофильная клиника «Тубер»">
+          <img src="assets/img/logo.png" width="195" height="60" alt="Многопрофильная клиника «Тубер»">
         </a>
 
         <nav class="nav header__nav" aria-label="Основное меню">
@@ -83,15 +83,73 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__content">
-          <p class="hero__title">ФЛЮОРОГРАФИЯ</p>
-          <p class="hero__subtitle">Цифровой малодозовый аппарат</p>
-          <p class="hero__text">Готовы проверить лёгкие?<br>Запишитесь уже сегодня</p>
-          <a class="btn btn--primary hero__btn" href="/diagnostika/flyuorografiya">Узнать больше</a>
+    <section class="hero" aria-label="Главные предложения">
+      <div class="swiper hero__slider" data-hero-slider>
+        <div class="swiper-wrapper">
+          <div class="swiper-slide hero__slide">
+            <div class="container hero__inner">
+              <div class="hero__content">
+                <p class="hero__title">ФЛЮОРОГРАФИЯ</p>
+                <p class="hero__subtitle">Цифровой малодозовый аппарат</p>
+                <p class="hero__text">Готовы проверить лёгкие?<br>Запишитесь уже сегодня</p>
+                <a class="btn btn--primary hero__btn" href="/diagnostika/flyuorografiya">Узнать больше</a>
+              </div>
+              <img class="hero__image" src="assets/img/hero-fluorography.png" width="857" height="530" alt="Цифровой малодозовый флюорограф">
+            </div>
+          </div>
+
+          <div class="swiper-slide hero__slide">
+            <div class="container hero__inner">
+              <div class="hero__content">
+                <p class="hero__title">УЗИ</p>
+                <p class="hero__subtitle">Ультразвуковая диагностика</p>
+                <p class="hero__text">Быстро, качественно,<br>без очередей</p>
+                <a class="btn btn--primary hero__btn" href="/diagnostika">Узнать больше</a>
+              </div>
+              <img class="hero__image" src="assets/img/hero-uzi.jpg" width="637" height="394" alt="Кабинет УЗИ" loading="lazy">
+            </div>
+          </div>
+
+          <div class="swiper-slide hero__slide">
+            <div class="container hero__inner">
+              <div class="hero__content">
+                <p class="hero__title">ПРИЁМ ВРАЧЕЙ</p>
+                <p class="hero__subtitle">Терапевт, невролог, ЛОР</p>
+                <p class="hero__text">Опытные специалисты<br>в центре города</p>
+                <a class="btn btn--primary hero__btn" href="/vrachi">Узнать больше</a>
+              </div>
+              <img class="hero__image" src="assets/img/hero-doctors.jpg" width="1200" height="742" alt="Приём врача в клинике «Тубер»" loading="lazy">
+            </div>
+          </div>
+
+          <div class="swiper-slide hero__slide">
+            <div class="container hero__inner">
+              <div class="hero__content">
+                <p class="hero__title">АНАЛИЗЫ</p>
+                <p class="hero__subtitle">Более 300 видов анализов</p>
+                <p class="hero__text">Быстро и без очередей<br>Запишитесь уже сегодня</p>
+                <a class="btn btn--primary hero__btn" href="/uslugi">Узнать больше</a>
+              </div>
+              <img class="hero__image" src="assets/img/hero-analyses.jpg" width="1200" height="742" alt="Регистратура клиники «Тубер»" loading="lazy">
+            </div>
+          </div>
+
+          <div class="swiper-slide hero__slide">
+            <div class="container hero__inner">
+              <div class="hero__content">
+                <p class="hero__title">КЛИНИКА «ТУБЕР»</p>
+                <p class="hero__subtitle">В центре Хабаровска</p>
+                <p class="hero__text">ул. Ленинградская, 53<br>ПН-ПТ 8:30-19:00</p>
+                <a class="btn btn--primary hero__btn" href="/kontakty">Как добраться</a>
+              </div>
+              <img class="hero__image" src="assets/img/hero-clinic.jpg" width="1200" height="742" alt="Здание клиники «Тубер» на Ленинградской, 53" loading="lazy">
+            </div>
+          </div>
         </div>
-        <img class="hero__image" src="assets/img/hero-fluorography.png" width="857" height="530" alt="Цифровой малодозовый флюорограф">
+      </div>
+
+      <div class="container hero__controls">
+        <div class="hero__pagination" data-hero-pagination></div>
       </div>
     </section>
 
