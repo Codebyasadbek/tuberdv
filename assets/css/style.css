@@ -1,5 +1,5 @@
 /* =========================================================
-   Тубер — главная страница
+   Тубер — стили сайта (главная + внутренние страницы)
    Mobile first: base styles = макет 440px, @media (min-width: 1024px) = макет 1920px
    ========================================================= */
 
@@ -41,6 +41,12 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -737,6 +743,16 @@ button {
   font-size: 16px;
 }
 
+/* A card without a price (e.g. a diagnostics doctor): keep the same gap above the button */
+.doctor-card > :nth-last-child(2):not(.doctor-card__price) {
+  margin-bottom: 20px;
+}
+
+/* Nothing to swipe (all cards fit): hide the swipe hint */
+.doctors__slider.is-locked .doctors__hint {
+  display: none;
+}
+
 @media (min-width: 1024px) {
   .doctors__hint {
     display: none;
@@ -780,7 +796,7 @@ button {
 .appointment__box {
   margin-inline: calc(var(--gutter) * -1);
   padding: 30px var(--gutter) 22px;
-  background: var(--c-sky);
+  background: var(--c-sky) url("../img/pattern-bg.jpg") center / cover no-repeat;
 }
 
 .appointment__title {
@@ -1073,7 +1089,7 @@ button {
 .footer {
   margin-top: 51px;
   padding-block: 20px 23px;
-  background: var(--c-sky);
+  background: var(--c-sky) url("../img/pattern-bg.jpg") center / cover no-repeat;
 }
 
 .footer__inner {
@@ -1246,5 +1262,466 @@ button {
 
   .footer__map img {
     height: 169px;
+  }
+}
+
+/* =========================================================
+   Внутренние страницы (УЗИ, Флюорография, Маммография, Контакты)
+   ========================================================= */
+
+/* ---------- Page hero: breadcrumbs, title, short list, button, photo ---------- */
+.page-hero {
+  background: var(--c-pale) url("../img/page-hero-bg.jpg") center / cover no-repeat;
+}
+
+.page-hero__inner {
+  display: grid;
+  gap: 20px;
+  padding-block: 16px 30px;
+}
+
+.breadcrumbs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+
+.breadcrumbs__item + .breadcrumbs__item::before {
+  content: "/";
+  margin-right: 8px;
+}
+
+.breadcrumbs a:hover {
+  color: var(--c-primary);
+}
+
+.page-hero__title {
+  font-size: 35px;
+  font-weight: 700;
+  color: var(--c-accent);
+}
+
+.page-hero__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.page-hero__list li::before {
+  content: "– ";
+}
+
+.page-hero__btn {
+  min-height: 45px;
+  margin-top: 24px;
+  padding-inline: 30px;
+}
+
+.page-hero__image {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .page-hero__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 600px);
+    grid-template-areas:
+      "crumbs crumbs"
+      "content image";
+    column-gap: 40px;
+    padding-block: 15px 30px;
+  }
+
+  .breadcrumbs {
+    grid-area: crumbs;
+    font-size: 16px;
+  }
+
+  .page-hero__content {
+    grid-area: content;
+    align-self: center;
+    padding-left: 60px;
+  }
+
+  .page-hero__image {
+    grid-area: image;
+  }
+
+  .page-hero__title {
+    font-size: 55px;
+  }
+
+  .page-hero__list {
+    gap: 10px;
+    margin-top: 28px;
+    font-size: 18px;
+  }
+
+  .page-hero__btn {
+    min-height: 50px;
+    margin-top: 40px;
+    font-size: 20px;
+  }
+}
+
+/* A page without a photo (Контакты): breadcrumbs and title only */
+.page-hero--simple .page-hero__inner {
+  grid-template-columns: none;
+  grid-template-areas: none;
+  gap: 16px;
+  padding-block: 16px 30px;
+}
+
+.page-hero--simple .breadcrumbs,
+.page-hero--simple .page-hero__content {
+  grid-area: auto;
+  padding-left: 0;
+}
+
+/* ---------- In-page navigation: Услуги | Врачи | Цены ---------- */
+.page-nav {
+  border-block: 1px solid var(--c-primary);
+  background: var(--c-white);
+}
+
+.page-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 6px;
+}
+
+.page-nav__list li + li::before {
+  content: "|";
+  margin-inline: 16px;
+  font-weight: 700;
+  color: var(--c-primary);
+}
+
+.page-nav__link {
+  font-family: var(--font-condensed);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--c-primary);
+  transition: color 0.2s;
+}
+
+.page-nav__link:hover {
+  color: var(--c-accent);
+}
+
+@media (min-width: 1024px) {
+  .page-nav__list {
+    padding-left: 60px;
+  }
+
+  .page-nav__list li + li::before {
+    margin-inline: 30px;
+  }
+
+  .page-nav__link {
+    font-size: 20px;
+  }
+}
+
+/* ---------- Service search + list of service types ---------- */
+.service-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding-inline: 16px 8px;
+  border: 1px solid var(--c-muted);
+  border-radius: var(--radius);
+  background: var(--c-white);
+}
+
+.service-search__input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-size: 16px;
+}
+
+.service-search__input::placeholder {
+  color: var(--c-placeholder);
+}
+
+.service-search__input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+.service-search__clear {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--c-placeholder);
+}
+
+.service-search__clear:hover {
+  color: var(--c-accent);
+}
+
+.service-search:focus-within {
+  border-color: var(--c-primary);
+}
+
+.service-types {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.service-types__btn {
+  font-family: var(--font-condensed);
+  font-size: 20px;
+  text-align: left;
+  color: var(--c-primary);
+  transition: color 0.2s;
+}
+
+.service-types__btn:hover,
+.service-types__btn[aria-pressed="true"] {
+  color: var(--c-accent);
+}
+
+.service-types__btn[aria-pressed="true"] {
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+  .service-types {
+    gap: 16px;
+    margin-top: 28px;
+    padding-left: 20px;
+  }
+
+  .service-types__btn {
+    font-size: 24px;
+  }
+}
+
+/* ---------- Prices: a tab per doctor or cabinet, a table in each ---------- */
+.price-tabs__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.price-tabs__tab {
+  min-height: 44px;
+  padding-inline: 18px;
+  border: 1px solid var(--c-primary);
+  border-radius: var(--radius);
+  font-family: var(--font-condensed);
+  font-size: 16px;
+  color: var(--c-primary);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.price-tabs__tab[aria-selected="true"] {
+  background: var(--c-primary);
+  color: var(--c-white);
+}
+
+.price-tabs__tab:not([aria-selected="true"]):hover {
+  background: var(--c-pale);
+}
+
+.price-tabs__panel {
+  margin-top: 16px;
+  padding: 10px;
+  border-radius: var(--radius);
+  background: var(--c-pale);
+}
+
+.price-table__wrap {
+  overflow-x: auto;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.price-table th,
+.price-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid var(--c-sky);
+  text-align: left;
+  vertical-align: top;
+}
+
+.price-table th {
+  font-weight: 700;
+  background: var(--c-sky);
+}
+
+.price-table td:not(:first-child),
+.price-table th:not(:first-child) {
+  white-space: nowrap;
+}
+
+.price-table tbody tr:hover {
+  background: var(--c-white);
+}
+
+.price-tabs__empty {
+  padding: 16px 10px;
+  color: var(--c-placeholder);
+}
+
+@media (min-width: 1024px) {
+  .price-tabs__tab {
+    min-height: 46px;
+    padding-inline: 24px;
+    font-size: 20px;
+  }
+
+  .price-tabs__panel {
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .price-table {
+    font-size: 16px;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 10px 14px;
+  }
+}
+
+/* ---------- Doctor card without a photo yet ---------- */
+.doctor-card__photo--empty {
+  object-fit: contain;
+}
+
+/* ---------- Contacts ---------- */
+.contacts__layout {
+  display: grid;
+  gap: 24px;
+}
+
+.contacts__info {
+  display: grid;
+  gap: 20px;
+}
+
+.contacts__cards {
+  display: grid;
+  gap: 12px;
+}
+
+.contacts__card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: var(--c-pale);
+}
+
+.contacts__icon {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.contacts__label {
+  margin-bottom: 6px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.contacts__text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 16px;
+}
+
+.contacts__text a {
+  color: var(--c-primary);
+}
+
+.contacts__text a:hover {
+  text-decoration: underline;
+}
+
+.contacts__note {
+  margin-top: 6px;
+  font-size: 14px;
+  color: var(--c-placeholder);
+}
+
+.contacts__btn {
+  justify-self: start;
+  min-height: 45px;
+  padding-inline: 30px;
+}
+
+.contacts__map {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--c-pale);
+}
+
+.route__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .contacts__layout {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    align-items: start;
+    gap: 40px;
+  }
+
+  .contacts__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .contacts__card {
+    padding: 24px;
+  }
+
+  .contacts__btn {
+    margin-top: 6px;
+  }
+
+  .contacts__map {
+    height: 460px;
+  }
+
+  .route__text {
+    font-size: 18px;
   }
 }

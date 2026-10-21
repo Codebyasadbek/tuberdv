@@ -58,6 +58,67 @@
     desktop.addEventListener("change", syncWithViewport);
   });
 
+  /* ---------- Prices: a tab per doctor / cabinet ---------- */
+  document.querySelectorAll("[data-price-tabs]").forEach((root) => {
+    const tabs = [...root.querySelectorAll('[role="tab"]')];
+    const select = (current) => {
+      tabs.forEach((tab) => {
+        const isOn = tab === current;
+        tab.setAttribute("aria-selected", String(isOn));
+        tab.tabIndex = isOn ? 0 : -1;
+        document.getElementById(tab.getAttribute("aria-controls")).hidden = !isOn;
+      });
+    };
+    tabs.forEach((tab) => tab.addEventListener("click", () => select(tab)));
+  });
+
+  /* ---------- Service search: filters the service types and the price rows ---------- */
+  const search = document.querySelector("[data-service-search]");
+  if (search) {
+    const input = search.querySelector("input");
+    const clear = search.querySelector("[data-search-clear]");
+    const typeButtons = [...document.querySelectorAll("[data-service-type]")];
+    const rows = [...document.querySelectorAll("[data-price-row]")];
+    const normalize = (text) => text.toLowerCase().replace(/ё/g, "е").trim();
+
+    // terms: words to look for (any of them); an empty list shows everything
+    const filter = (terms, filterTypes) => {
+      const matches = (text) => !terms.length || terms.some((term) => normalize(text).includes(term));
+      typeButtons.forEach((btn) => (btn.parentElement.hidden = filterTypes && !matches(btn.textContent)));
+      rows.forEach((row) => (row.hidden = !matches(row.cells[0].textContent)));
+      document.querySelectorAll("[data-price-empty]").forEach((note) => {
+        note.hidden = [...note.parentElement.querySelectorAll("[data-price-row]")].some((row) => !row.hidden);
+      });
+      clear.hidden = !input.value;
+    };
+
+    const pressType = (current) => typeButtons.forEach((btn) => btn.setAttribute("aria-pressed", String(btn === current)));
+
+    input.addEventListener("input", () => {
+      pressType(null);
+      const query = normalize(input.value);
+      filter(query ? [query] : [], true);
+    });
+
+    // A service type shows its prices; a second click shows all of them again
+    typeButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const isOn = btn.getAttribute("aria-pressed") === "true";
+        pressType(isOn ? null : btn);
+        input.value = isOn ? "" : btn.textContent;
+        filter(isOn ? [] : btn.dataset.serviceType.split(",").map(normalize), false);
+        if (!isOn) document.getElementById("ceny")?.scrollIntoView();
+      });
+    });
+
+    clear.addEventListener("click", () => {
+      input.value = "";
+      pressType(null);
+      filter([], true);
+      input.focus();
+    });
+  }
+
   /* ---------- Sliders (Swiper) ---------- */
   // slidesPerView: "auto" — slide widths are set in CSS, so any number of cards from the CMS fits
   if (window.Swiper) {
@@ -75,13 +136,18 @@
 
     const doctors = document.querySelector("[data-doctors-slider]");
     if (doctors) {
-      new Swiper(doctors, {
+      const doctorsSwiper = new Swiper(doctors, {
         slidesPerView: "auto",
         spaceBetween: 18,
         grabCursor: true,
         watchOverflow: true,
         breakpoints: { 1024: { spaceBetween: 21.25 } },
+        on: {
+          lock: () => doctors.classList.add("is-locked"),
+          unlock: () => doctors.classList.remove("is-locked"),
+        },
       });
+      doctors.classList.toggle("is-locked", doctorsSwiper.isLocked);
     }
 
     const documents = document.querySelector("[data-documents-slider]");
