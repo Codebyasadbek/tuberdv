@@ -28,6 +28,22 @@
     });
   }
 
+  /* ---------- Desktop menu dropdowns («Диагностика») ---------- */
+  document.querySelectorAll("[data-dropdown-toggle]").forEach((toggle) => {
+    const item = toggle.parentElement;
+    const setOpen = (open) => toggle.setAttribute("aria-expanded", String(open));
+    toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
+    document.addEventListener("click", (event) => {
+      if (!item.contains(event.target)) setOpen(false);
+    });
+    item.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+  });
+
   /* ---------- Services: tabs on desktop, accordion on mobile ---------- */
   document.querySelectorAll("[data-tabs]").forEach((root) => {
     const tabs = [...root.querySelectorAll("[data-tab]")];

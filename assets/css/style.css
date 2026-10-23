@@ -265,6 +265,87 @@ button {
   color: var(--c-accent);
 }
 
+/* «Диагностика» in the desktop menu: a dropdown (overlay) opened on hover or click */
+.nav__item--dropdown {
+  position: relative; /* anchor for the dropdown */
+}
+
+.nav__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav__toggle::after {
+  content: "";
+  width: 7px;
+  height: 7px;
+  margin-top: -4px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s;
+}
+
+.nav__toggle[aria-expanded="true"]::after {
+  margin-top: 3px;
+  transform: rotate(-135deg);
+}
+
+.nav__dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -18px;
+  z-index: 20;
+  padding-top: 12px; /* keeps hover alive between the item and the panel */
+}
+
+.nav__item--dropdown:hover .nav__dropdown,
+.nav__toggle[aria-expanded="true"] + .nav__dropdown {
+  display: block;
+}
+
+.nav__sub {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 220px;
+  padding: 16px 18px;
+  border: 1px solid var(--c-sky);
+  border-radius: var(--radius);
+  background: var(--c-pale);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.08);
+}
+
+.nav__sub-link {
+  font-size: 18px;
+  white-space: nowrap;
+  color: var(--c-primary);
+  transition: color 0.2s;
+}
+
+.nav__sub-link:hover {
+  color: var(--c-accent);
+}
+
+/* Dropdown menu: a group with its own sub-items */
+.menu__heading {
+  font-size: 18px;
+  color: var(--c-primary);
+}
+
+.menu__sub {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 8px 0 2px 16px;
+}
+
+.menu__link--sub {
+  font-size: 16px;
+}
+
 /* Square menu button: three lines that turn into a cross while the menu is open */
 .menu-btn__lines,
 .menu-btn__lines::before,
@@ -415,7 +496,7 @@ button {
 
   /* Narrow desktops (1024–1239px): smaller menu text and search so the row fits */
   .nav__list {
-    gap: 14px;
+    gap: 12px;
   }
 
   .nav__link {
@@ -423,7 +504,7 @@ button {
   }
 
   .header__search {
-    width: 170px;
+    width: 150px;
   }
 
   /* The dropdown opens under the menu button, at the left edge of the content */
@@ -452,7 +533,7 @@ button {
   }
 
   .header__search {
-    width: 215px;
+    width: 200px;
   }
 }
 

@@ -65,7 +65,16 @@
           <ul class="nav__list">
             <li><a class="nav__link" href="/o-tsentre">О центре</a></li>
             <li><a class="nav__link" href="/vrachi">Врачи</a></li>
-            <li><a class="nav__link" href="/diagnostika">Диагностика</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <button class="nav__link nav__toggle" type="button" aria-expanded="false" aria-controls="nav-diagnostics" data-dropdown-toggle>Диагностика</button>
+              <div class="nav__dropdown" id="nav-diagnostics">
+                <ul class="nav__sub">
+                  <li><a class="nav__sub-link" href="uzi.html">УЗИ</a></li>
+                  <li><a class="nav__sub-link" href="flyuorografiya.html">Флюорография</a></li>
+                  <li><a class="nav__sub-link" href="mammografiya.html">Маммография</a></li>
+                </ul>
+              </div>
+            </li>
             <li><a class="nav__link" href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
             <li><a class="nav__link" href="/prajs">Цены</a></li>
             <li><a class="nav__link" href="kontakty.html" aria-current="page">Контакты</a></li>
@@ -91,7 +100,14 @@
         <li><a class="menu__link" href="/o-tsentre">О центре</a></li>
         <li><a class="menu__link" href="/uslugi">Услуги</a></li>
         <li><a class="menu__link" href="/vrachi">Врачи</a></li>
-        <li><a class="menu__link" href="/diagnostika">Диагностика</a></li>
+        <li>
+          <span class="menu__heading">Диагностика</span>
+          <ul class="menu__sub">
+            <li><a class="menu__link menu__link--sub" href="uzi.html">УЗИ</a></li>
+            <li><a class="menu__link menu__link--sub" href="flyuorografiya.html">Флюорография</a></li>
+            <li><a class="menu__link menu__link--sub" href="mammografiya.html">Маммография</a></li>
+          </ul>
+        </li>
         <li><a class="menu__link" href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
         <li><a class="menu__link" href="/prajs">Цены</a></li>
         <li><a class="menu__link" href="/informatsiya-dlya-patsientov">Информация для пациентов</a></li>
