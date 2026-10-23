@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Цены на услуги клиники «Тубер» в Хабаровске — прайс 2026</title>
+  <meta name="description" content="Прайс многопрофильной клиники «Тубер»: приём врачей, УЗИ, флюорография, маммография, ЭКГ, процедурный кабинет. Цены 2026 года.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="header" data-header>
+    <div class="header__top">
+      <div class="container header__top-inner">
+        <div class="contact contact--phone header__contact">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+
+        <div class="contact contact--address header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+
+        <div class="contact header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+
+        <a class="btn btn--accent header__cta" href="#appointment">Записаться на приём</a>
+
+        <button class="icon-btn header__a11y header__a11y--mobile" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+        <button class="header__burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <img src="assets/icons/burger.svg" width="50" height="12" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container header__main-inner">
+        <button class="icon-btn menu-btn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span class="menu-btn__lines" aria-hidden="true"></span>
+        </button>
+
+        <a class="logo header__logo" href="index.html">
+          <img src="assets/img/logo.png" width="195" height="60" alt="Многопрофильная клиника «Тубер»">
+        </a>
+
+        <nav class="nav header__nav" aria-label="Основное меню">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="o-tsentre.html">О центре</a></li>
+            <li><a class="nav__link" href="vrachi.html">Врачи</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <button class="nav__link nav__toggle" type="button" aria-expanded="false" aria-controls="nav-diagnostics" data-dropdown-toggle>Диагностика</button>
+              <div class="nav__dropdown" id="nav-diagnostics">
+                <ul class="nav__sub">
+                  <li><a class="nav__sub-link" href="uzi.html">УЗИ</a></li>
+                  <li><a class="nav__sub-link" href="flyuorografiya.html">Флюорография</a></li>
+                  <li><a class="nav__sub-link" href="mammografiya.html">Маммография</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="nav__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+            <li><a class="nav__link" href="prajs.html" aria-current="page">Цены</a></li>
+            <li><a class="nav__link" href="kontakty.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <button class="icon-btn header__a11y" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+
+        <form class="search header__search" action="prajs.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск" aria-label="Поиск услуги и цены">
+          <button class="search__btn" type="submit" aria-label="Найти">
+            <img src="assets/icons/search.svg" width="21.4715" height="22.4491" alt="">
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Dropdown menu over the page: opened by the burger (mobile) and the square menu button (desktop) -->
+    <nav class="menu" id="site-menu" aria-label="Меню сайта">
+      <ul class="menu__list">
+        <li><a class="menu__link" href="o-tsentre.html">О центре</a></li>
+        <li><a class="menu__link" href="index.html#services">Услуги</a></li>
+        <li><a class="menu__link" href="vrachi.html">Врачи</a></li>
+        <li>
+          <span class="menu__heading">Диагностика</span>
+          <ul class="menu__sub">
+            <li><a class="menu__link menu__link--sub" href="uzi.html">УЗИ</a></li>
+            <li><a class="menu__link menu__link--sub" href="flyuorografiya.html">Флюорография</a></li>
+            <li><a class="menu__link menu__link--sub" href="mammografiya.html">Маммография</a></li>
+          </ul>
+        </li>
+        <li><a class="menu__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+        <li><a class="menu__link" href="prajs.html" aria-current="page">Цены</a></li>
+        <li><a class="menu__link" href="informatsiya-dlya-patsientov.html">Информация для пациентов</a></li>
+        <li><a class="menu__link" href="kontakty.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--simple">
+      <div class="container page-hero__inner">
+      <nav class="breadcrumbs" aria-label="Навигационная цепочка">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item"><span aria-current="page">Цены на услуги</span></li>
+        </ol>
+      </nav>
+        <div class="page-hero__content">
+          <h1 class="page-hero__title">Цены на услуги</h1>
+          <p class="page-hero__lead">Прейскурант на диагностические исследования и лечебные процедуры 2026 года. Перед записью уточняйте актуальную стоимость у администратора.</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-nav" aria-label="Разделы страницы">
+      <div class="container">
+        <ul class="page-nav__list">
+          <li><a class="page-nav__link" href="#priem">Приём врачей</a></li>
+          <li><a class="page-nav__link" href="#uzi">УЗИ</a></li>
+          <li><a class="page-nav__link" href="#rentgen">Рентген-кабинет</a></li>
+          <li><a class="page-nav__link" href="#ekg">ЭКГ</a></li>
+          <li><a class="page-nav__link" href="#protsedurnyj">Процедурный кабинет</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section prices-search">
+      <div class="container">
+        <div class="service-search" data-service-search>
+          <img src="assets/icons/search.svg" width="21.4715" height="22.4491" alt="">
+          <input class="service-search__input" type="search" placeholder="Найти услугу в прайсе" aria-label="Найти услугу в прайсе">
+          <button class="service-search__clear" type="button" aria-label="Сбросить поиск" data-search-clear hidden>&times;</button>
+        </div>
+        <p class="prices__empty-all" data-search-empty hidden>Ничего не найдено. Уточните название услуги или позвоните нам: <a href="tel:+74212456000">+7 (4212) 456-000</a>.</p>
+      </div>
+    </section>
+
+    <section class="section prices" data-price-section id="priem">
+      <div class="container">
+        <h2 class="section__title">Приём врачей</h2>
+        <div class="price-tabs__panel">
+          <div class="price-table__wrap">
+            <table class="price-table">
+              <thead>
+                <tr><th scope="col">Медицинская услуга</th><th scope="col">Стоимость</th></tr>
+              </thead>
+              <tbody>
+                <tr data-price-row><td>Прием врача терапевта ПЕРВИЧНЫЙ</td><td>2 500 ₽</td></tr>
+                <tr data-price-row><td>Прием врача терапевта ПОВТОРНЫЙ</td><td>2 300 ₽</td></tr>
+                <tr data-price-row><td>Прием врача кардиолога ПЕРВИЧНЫЙ</td><td>2 700 ₽</td></tr>
+                <tr data-price-row><td>Прием врача кардиолога ПОВТОРНЫЙ</td><td>2 000 ₽</td></tr>
+                <tr data-price-row><td>Прием врача эндокринолога ПЕРВИЧНЫЙ</td><td>3 500 ₽</td></tr>
+                <tr data-price-row><td>Прием врача эндокринолога ПОВТОРНЫЙ</td><td>3 000 ₽</td></tr>
+                <tr data-price-row><td>Прием врача инфекциониста ПЕРВИЧНЫЙ, проф., д.м.н.</td><td>3 500 ₽</td></tr>
+                <tr data-price-row><td>Прием врача инфекциониста ПОВТОРНЫЙ, проф., д.м.н</td><td>3 000 ₽</td></tr>
+                <tr data-price-row><td>Прием врача нейрохирурга ПЕРВИЧНЫЙ</td><td>3 000 ₽</td></tr>
+                <tr data-price-row><td>Прием врача нейрохирурга ПОВТОРНЫЙ</td><td>2 500 ₽</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="price-tabs__empty" data-price-empty hidden>Ничего не найдено. Уточните название услуги или позвоните нам.</p>
+        </div>
+        <p class="prices__note">Стоимость первичного и повторного приёма указана за одну консультацию.</p>
+      </div>
+    </section>
+
+    <section class="section prices" data-price-section id="uzi">
+      <div class="container">
+        <h2 class="section__title">УЗИ</h2>
+        <div class="price-tabs" data-price-tabs>
+          <div class="price-tabs__list" role="tablist" aria-label="Прайс по врачам">
+          <button class="price-tabs__tab" type="button" role="tab" id="tab-khripkova" aria-controls="price-khripkova" aria-selected="true">УЗИ — Хрипкова Е.А.</button>
+          <button class="price-tabs__tab" type="button" role="tab" id="tab-chelpanov" aria-controls="price-chelpanov" aria-selected="false" tabindex="-1">УЗИ — Челпанов В.К.</button>
+          </div>
+        <div class="price-tabs__panel" role="tabpanel" id="price-khripkova" aria-labelledby="tab-khripkova">
+          <div class="price-table__wrap">
+            <table class="price-table">
+              <thead>
+                <tr><th scope="col">Медицинская услуга</th><th scope="col">Стоимость</th><th scope="col">Время</th></tr>
+              </thead>
+              <tbody>
+                <tr data-price-row><td>Эхокардиография (УЗИ сердца - взрослый)</td><td>2 800 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование лимфатических узлов (одна анатомическая зона)</td><td>900 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование плевральных полостей (с двух сторон)</td><td>900 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование печени</td><td>1 300 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование желчного пузыря и протоков</td><td>900 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование желчного пузыря с определением его сократимости (эхохолецистография)</td><td>1 600 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование поджелудочной железы</td><td>800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование селезенки</td><td>800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое определение жидкости в брюшной полости</td><td>500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование органов брюшной полости (печень, желчный пузырь, поджелудочная железа, селезенка, мезентериальные лимфоузлы) взрослому</td><td>2 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование щитовидной железы и паращитовидных желез</td><td>1 800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование надпочечников</td><td>700 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек</td><td>1 600 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек и надпочечников</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек с мочевым пузырем</td><td>1 300 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование мочевого пузыря</td><td>700 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование мочевого пузыря с определением остаточной мочи</td><td>700 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий</td><td>2 800 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Дуплексное сканирование вен нижних конечностей</td><td>3 000 ₽</td><td>30 мин</td></tr>
+                <tr data-price-row><td>Дуплексное сканирование артерий нижних конечностей</td><td>3 000 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование печени с ЦДК</td><td>800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование печени и желчного пузыря</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование печени, поджелудочной железы и желчного пузыря</td><td>1 800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование органов брюшной полости и почек с мочевым пузырем</td><td>3 600 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек с ЦДК</td><td>1 300 ₽</td><td>25 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек и надпочечников</td><td>1 500 ₽</td><td>25 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек с мочевым пузырем и остаточным объемом</td><td>1 700 ₽</td><td>25 мин</td></tr>
+                <tr data-price-row><td>Срок беременности перед медицинским абортом</td><td>1 300 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование щитовидной железы и паращитовидных желез</td><td>1 400 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование слюнных желез</td><td>1 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование мягких тканей (одна анатомическая зона)</td><td>900 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование молочных желез с лимфоузлами</td><td>2 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование предстательной железы с пузырьками абдоминально</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование мошонки в ЦДК</td><td>1 800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование полового члена ЦДК</td><td>1 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование предстательной железы, мошонки и мочевого пузыря с остаточным объемом</td><td>2 500 ₽</td><td>20 мин</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="price-tabs__empty" data-price-empty hidden>Ничего не найдено. Уточните название услуги или позвоните нам.</p>
+        </div>
+        <div class="price-tabs__panel" role="tabpanel" id="price-chelpanov" aria-labelledby="tab-chelpanov" hidden>
+          <div class="price-table__wrap">
+            <table class="price-table">
+              <thead>
+                <tr><th scope="col">Медицинская услуга</th><th scope="col">Стоимость</th><th scope="col">Время</th></tr>
+              </thead>
+              <tbody>
+                <tr data-price-row><td>Эхокардиография (УЗИ сердца - взрослый)</td><td>2 800 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование лимфатических узлов (одна анатомическая зона)</td><td>900 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование плевральных полостей (с двух сторон)</td><td>900 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование печени</td><td>1 300 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование желчного пузыря и протоков</td><td>900 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование поджелудочной железы</td><td>800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование селезенки</td><td>800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое определение жидкости в брюшной полости</td><td>500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование органов брюшной полости (печень, желчный пузырь, поджелудочная железа, селезенка, мезентериальные лимфоузлы) взрослому</td><td>2 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование желудка</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование органов брюшной полости (печень, желчный пузырь, поджелудочная железа, селезенка, мезентериальные лимфоузлы) и желудка</td><td>3 000 ₽</td><td>30 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование щитовидной железы и паращитовидных желез</td><td>1 800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование надпочечников</td><td>700 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек</td><td>1 600 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек и надпочечников</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек с мочевым пузырем</td><td>1 300 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование мочевого пузыря</td><td>700 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование мочевого пузыря с определением остаточной мочи</td><td>700 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Дуплексное сканирование почек и артерий почек</td><td>1 800 ₽</td><td>30 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование печени и желчного пузыря</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование печени, поджелудочной железы и желчного пузыря</td><td>1 800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование органов брюшной полости и почек с мочевым пузырем</td><td>3 600 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование почек с мочевым пузырем и остаточным объемом</td><td>1 700 ₽</td><td>25 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование щитовидной железы и паращитовидных желез</td><td>1 400 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование слюнных желез</td><td>1 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование мягких тканей (одна анатомическая зона)</td><td>900 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование молочных желез с лимфоузлами</td><td>2 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование предстательной железы с пузырьками абдоминально</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование мошонки в ЦДК</td><td>1 800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование предстательной железы, мошонки и мочевого пузыря с остаточным объемом</td><td>2 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование предстательной железы (ТРУЗИ)</td><td>1 800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование крупного сустава (локтевой, л/запястный, коленный, г/стопный)</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование крупных суставов (локтевые, л/запястные, коленные, г/стопные)</td><td>2 000 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>УЗИ малого таза трансабдоминально</td><td>2 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>УЗИ малого таза трансвагинально</td><td>2 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>УЗИ малого таза у женщин трансабдоминально и транвагинально</td><td>2 500 ₽</td><td>—</td></tr>
+                <tr data-price-row><td>Фолликулометрия</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование «Окно имплантации»</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Срок беременности перед медицинским абортом</td><td>1 300 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Доплерометрия маточно-плацентарного кровотока (ЧСС плода и кровоток)</td><td>1 700 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование плода (Фетометрия)</td><td>1 800 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Доплерометрия маточно-плацентарного кровотока и фетометрия</td><td>2 500 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование шейки матки (цервикометрия)</td><td>1 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование плода (определение индекса амниотической жидкости)</td><td>500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Ультразвуковое исследование до 12 недель беременности (ЧСС плода, размер эмбриона)</td><td>1 500 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Дуплексное сканирование экстракраниальных отделов брахиоцефальных артерий</td><td>2 800 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Дуплексное сканирование вен нижних конечностей</td><td>3 000 ₽</td><td>30 мин</td></tr>
+                <tr data-price-row><td>Дуплексное сканирование артерий нижних конечностей</td><td>3 000 ₽</td><td>40 мин</td></tr>
+                <tr data-price-row><td>Дуплексное сканирование артерий и вен нижних конечностей</td><td>5 000 ₽</td><td>60 мин</td></tr>
+                <tr data-price-row><td>УЗИ интракраниального отдела брахиоцефальных артерий</td><td>1 800 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>УЗИ экстракраниальных и интракраниальных отделов брахиоцефальных артерий</td><td>4 000 ₽</td><td>40 мин</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="price-tabs__empty" data-price-empty hidden>Ничего не найдено. Уточните название услуги или позвоните нам.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prices" data-price-section id="rentgen">
+      <div class="container">
+        <h2 class="section__title">Рентген-кабинет</h2>
+        <div class="price-tabs" data-price-tabs>
+          <div class="price-tabs__list" role="tablist" aria-label="Прайс по врачам">
+          <button class="price-tabs__tab" type="button" role="tab" id="tab-xray" aria-controls="price-xray" aria-selected="true">Рентген-кабинет — Хотченков Е.М.</button>
+          </div>
+        <div class="price-tabs__panel" role="tabpanel" id="price-xray" aria-labelledby="tab-xray">
+          <div class="price-table__wrap">
+            <table class="price-table">
+              <thead>
+                <tr><th scope="col">Медицинская услуга</th><th scope="col">Стоимость</th><th scope="col">Время</th></tr>
+              </thead>
+              <tbody>
+                <tr data-price-row><td>Обзорная маммография обеих молочных желёз в двух проекциях</td><td>2 000 ₽</td><td>20 мин</td></tr>
+                <tr data-price-row><td>Цифровая флюорография лёгких в одной проекции</td><td>1 000 ₽</td><td>15 мин</td></tr>
+                <tr data-price-row><td>Цифровая флюорография лёгких в двух проекциях</td><td>1 300 ₽</td><td>15 мин</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="price-tabs__empty" data-price-empty hidden>Ничего не найдено. Уточните название услуги или позвоните нам.</p>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prices" data-price-section id="ekg">
+      <div class="container">
+        <h2 class="section__title">ЭКГ</h2>
+        <div class="price-tabs__panel">
+          <div class="price-table__wrap">
+            <table class="price-table">
+              <thead>
+                <tr><th scope="col">Медицинская услуга</th><th scope="col">Стоимость</th></tr>
+              </thead>
+              <tbody>
+                <tr data-price-row><td>ЭКГ исследование</td><td>750 ₽</td></tr>
+                <tr data-price-row><td>ЭКГ исследование с нагрузкой</td><td>1 100 ₽</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="price-tabs__empty" data-price-empty hidden>Ничего не найдено. Уточните название услуги или позвоните нам.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section prices" data-price-section id="protsedurnyj">
+      <div class="container">
+        <h2 class="section__title">Процедурный кабинет</h2>
+        <div class="price-tabs__panel">
+          <div class="price-table__wrap">
+            <table class="price-table">
+              <thead>
+                <tr><th scope="col">Медицинская услуга</th><th scope="col">Стоимость</th></tr>
+              </thead>
+              <tbody>
+                <tr data-price-row><td>Внутривенная инъекция капельно</td><td>550 ₽</td></tr>
+                <tr data-price-row><td>Внутривенная инъекция капельно 1 в/в струйно в систему</td><td>670 ₽</td></tr>
+                <tr data-price-row><td>Внутривенная инъекция капельно 2 в/в струйно в систему</td><td>770 ₽</td></tr>
+                <tr data-price-row><td>Инъекция внутривенная струйно</td><td>300 ₽</td></tr>
+                <tr data-price-row><td>Инъекция внутримышечная</td><td>200 ₽</td></tr>
+                <tr data-price-row><td>Инъекция внутримышечная х2</td><td>300 ₽</td></tr>
+                <tr data-price-row><td>Инъекция подкожная</td><td>200 ₽</td></tr>
+                <tr data-price-row><td>Внутривенное вливание струйное 3 препарата (без стоимости препарата)</td><td>510 ₽</td></tr>
+                <tr data-price-row><td>Внутримышечная инъекция (без стоимости препарата)</td><td>150 ₽</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="price-tabs__empty" data-price-empty hidden>Ничего не найдено. Уточните название услуги или позвоните нам.</p>
+        </div>
+        <p class="prices__note">Инъекции и внутривенные вливания проводятся по назначению специалиста.</p>
+      </div>
+    </section>
+
+    <section class="section appointment" id="appointment">
+      <div class="container">
+        <div class="appointment__box">
+          <div class="appointment__intro">
+            <h2 class="appointment__title">Запишитесь на приём</h2>
+            <p class="appointment__text">Оставьте свой номер телефона — мы перезвоним.</p>
+            <p class="appointment__text appointment__text--wide">Ответим на вопросы, подберём удобное время и запишем на приём</p>
+          </div>
+
+          <form class="form appointment__form" action="send.php" method="post" data-booking-form>
+            <input class="form__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name" aria-label="Имя" required>
+            <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" inputmode="tel" aria-label="Телефон" required>
+            <label class="form__consent">
+              <input class="form__checkbox" type="checkbox" name="consent" required>
+              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="reglament-o-zashchite-dannykh.html">Политикой в отношении обработки персональных данных</a> и даю <a href="soglasie-na-obrabotku-dannykh.html">Согласие на обработку персональных данных</a></span>
+            </label>
+            <button class="btn btn--primary form__submit" type="submit">Записаться на приём</button>
+            <p class="form__status" role="status" data-form-status hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <img src="assets/img/logo.png" width="164" height="50" alt="Многопрофильная клиника «Тубер»">
+        </a>
+        <a class="btn btn--accent footer__btn" href="#appointment">Консультация</a>
+      </div>
+
+      <nav class="footer__nav" aria-label="Меню в подвале">
+        <ul class="footer__menu">
+          <li><a href="vrachi.html">Врачи</a></li>
+          <li><a href="index.html#services">Отделения</a></li>
+          <li><a href="prajs.html">Цены</a></li>
+        </ul>
+        <ul class="footer__menu">
+          <li><a href="kontakty.html">Контакты</a></li>
+          <li><a href="informatsiya-dlya-patsientov.html">Документы</a></li>
+          <li><a href="karta-sajta.html">Карта сайта</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contacts">
+        <div class="contact contact--phone">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+        <div class="contact contact--address">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+        <div class="contact contact--hours">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="footer__map" href="https://yandex.ru/maps/org/100031773431/" target="_blank" rel="noopener">
+        <img src="assets/img/footer-map.png" width="302" height="171" alt="Клиника на карте: г. Хабаровск, ул. Ленинградская, 53">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

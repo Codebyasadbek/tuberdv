@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Врачи клиники «Тубер» в Хабаровске — терапевт, кардиолог, эндокринолог, УЗИ</title>
+  <meta name="description" content="Врачи многопрофильной клиники «Тубер»: терапевт, нейрохирург, эндокринолог, инфекционист, кардиолог, врачи УЗИ и рентгенолог. Стаж, категория, цены приёма.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="header" data-header>
+    <div class="header__top">
+      <div class="container header__top-inner">
+        <div class="contact contact--phone header__contact">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+
+        <div class="contact contact--address header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+
+        <div class="contact header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+
+        <a class="btn btn--accent header__cta" href="#appointment">Записаться на приём</a>
+
+        <button class="icon-btn header__a11y header__a11y--mobile" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+        <button class="header__burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <img src="assets/icons/burger.svg" width="50" height="12" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container header__main-inner">
+        <button class="icon-btn menu-btn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span class="menu-btn__lines" aria-hidden="true"></span>
+        </button>
+
+        <a class="logo header__logo" href="index.html">
+          <img src="assets/img/logo.png" width="195" height="60" alt="Многопрофильная клиника «Тубер»">
+        </a>
+
+        <nav class="nav header__nav" aria-label="Основное меню">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="o-tsentre.html">О центре</a></li>
+            <li><a class="nav__link" href="vrachi.html" aria-current="page">Врачи</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <button class="nav__link nav__toggle" type="button" aria-expanded="false" aria-controls="nav-diagnostics" data-dropdown-toggle>Диагностика</button>
+              <div class="nav__dropdown" id="nav-diagnostics">
+                <ul class="nav__sub">
+                  <li><a class="nav__sub-link" href="uzi.html">УЗИ</a></li>
+                  <li><a class="nav__sub-link" href="flyuorografiya.html">Флюорография</a></li>
+                  <li><a class="nav__sub-link" href="mammografiya.html">Маммография</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="nav__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+            <li><a class="nav__link" href="prajs.html">Цены</a></li>
+            <li><a class="nav__link" href="kontakty.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <button class="icon-btn header__a11y" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+
+        <form class="search header__search" action="prajs.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск" aria-label="Поиск услуги и цены">
+          <button class="search__btn" type="submit" aria-label="Найти">
+            <img src="assets/icons/search.svg" width="21.4715" height="22.4491" alt="">
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Dropdown menu over the page: opened by the burger (mobile) and the square menu button (desktop) -->
+    <nav class="menu" id="site-menu" aria-label="Меню сайта">
+      <ul class="menu__list">
+        <li><a class="menu__link" href="o-tsentre.html">О центре</a></li>
+        <li><a class="menu__link" href="index.html#services">Услуги</a></li>
+        <li><a class="menu__link" href="vrachi.html" aria-current="page">Врачи</a></li>
+        <li>
+          <span class="menu__heading">Диагностика</span>
+          <ul class="menu__sub">
+            <li><a class="menu__link menu__link--sub" href="uzi.html">УЗИ</a></li>
+            <li><a class="menu__link menu__link--sub" href="flyuorografiya.html">Флюорография</a></li>
+            <li><a class="menu__link menu__link--sub" href="mammografiya.html">Маммография</a></li>
+          </ul>
+        </li>
+        <li><a class="menu__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+        <li><a class="menu__link" href="prajs.html">Цены</a></li>
+        <li><a class="menu__link" href="informatsiya-dlya-patsientov.html">Информация для пациентов</a></li>
+        <li><a class="menu__link" href="kontakty.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--simple">
+      <div class="container page-hero__inner">
+      <nav class="breadcrumbs" aria-label="Навигационная цепочка">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item"><span aria-current="page">Врачи</span></li>
+        </ol>
+      </nav>
+        <div class="page-hero__content">
+          <h1 class="page-hero__title">Врачи</h1>
+          <p class="page-hero__lead">Специалисты многопрофильной клиники «Тубер». Расписание и запись — у администратора по телефону <a href="tel:+74212456000">+7 (4212) 456-000</a> или через форму ниже.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <ul class="doctors-grid">
+            <li class="doctor-card" id="akhtyrskaya">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Ахтырская</span> <span>Лариса Викторовна</span></h3>
+              <p class="doctor-card__position">Врач-терапевт</p>
+              <ul class="doctor-card__facts">
+                <li>высшая категория</li>
+                <li>стаж более 33 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 2 500 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="doctor-card" id="kovtun">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Ковтун</span> <span>Максим Александрович</span></h3>
+              <p class="doctor-card__position">Врач-нейрохирург</p>
+              <ul class="doctor-card__facts">
+                <li>высшая категория</li>
+                <li>стаж более 18 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 3 000 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="doctor-card" id="tagryt">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Тагрыт</span> <span>Ирина Владимировна</span></h3>
+              <p class="doctor-card__position">Врач-эндокринолог</p>
+              <ul class="doctor-card__facts">
+                <li>кандидат медицинских наук</li>
+                <li>высшая категория</li>
+                <li>стаж более 22 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 3 500 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="doctor-card" id="makarova">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Макарова</span> <span>Татьяна Евгеньевна</span></h3>
+              <p class="doctor-card__position">Врач-инфекционист</p>
+              <ul class="doctor-card__facts">
+                <li>кандидат медицинских наук</li>
+                <li>профессор кафедры медицинского института</li>
+                <li>стаж более 30 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 3 500 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="doctor-card" id="rachinskaya">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Рачинская</span> <span>Александра Александровна</span></h3>
+              <p class="doctor-card__position">Врач-кардиолог</p>
+              <ul class="doctor-card__facts">
+                <li>первая категория</li>
+                <li>стаж 9 лет</li>
+              </ul>
+              <p class="doctor-card__price">Цена приёма от 2 700 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="doctor-card" id="khripkova">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Хрипкова</span> <span>Елена Алексеевна</span></h3>
+              <p class="doctor-card__position">Врач ультразвуковой диагностики</p>
+              <ul class="doctor-card__facts">
+                <li>стаж 14 лет</li>
+              </ul>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="doctor-card" id="chelpanov">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Челпанов</span> <span>Владимир Константинович</span></h3>
+              <p class="doctor-card__position">Врач ультразвуковой диагностики</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="doctor-card" id="khotchenkov">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Хотченков</span> <span>Е. М.</span></h3>
+              <p class="doctor-card__position">Врач-рентгенолог</p>
+              <ul class="doctor-card__facts">
+                <li>стаж 4 года</li>
+              </ul>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section appointment" id="appointment">
+      <div class="container">
+        <div class="appointment__box">
+          <div class="appointment__intro">
+            <h2 class="appointment__title">Запишитесь на приём</h2>
+            <p class="appointment__text">Оставьте свой номер телефона — мы перезвоним.</p>
+            <p class="appointment__text appointment__text--wide">Ответим на вопросы, подберём удобное время и запишем на приём</p>
+          </div>
+
+          <form class="form appointment__form" action="send.php" method="post" data-booking-form>
+            <input class="form__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name" aria-label="Имя" required>
+            <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" inputmode="tel" aria-label="Телефон" required>
+            <label class="form__consent">
+              <input class="form__checkbox" type="checkbox" name="consent" required>
+              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="reglament-o-zashchite-dannykh.html">Политикой в отношении обработки персональных данных</a> и даю <a href="soglasie-na-obrabotku-dannykh.html">Согласие на обработку персональных данных</a></span>
+            </label>
+            <button class="btn btn--primary form__submit" type="submit">Записаться на приём</button>
+            <p class="form__status" role="status" data-form-status hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <img src="assets/img/logo.png" width="164" height="50" alt="Многопрофильная клиника «Тубер»">
+        </a>
+        <a class="btn btn--accent footer__btn" href="#appointment">Консультация</a>
+      </div>
+
+      <nav class="footer__nav" aria-label="Меню в подвале">
+        <ul class="footer__menu">
+          <li><a href="vrachi.html">Врачи</a></li>
+          <li><a href="index.html#services">Отделения</a></li>
+          <li><a href="prajs.html">Цены</a></li>
+        </ul>
+        <ul class="footer__menu">
+          <li><a href="kontakty.html">Контакты</a></li>
+          <li><a href="informatsiya-dlya-patsientov.html">Документы</a></li>
+          <li><a href="karta-sajta.html">Карта сайта</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contacts">
+        <div class="contact contact--phone">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+        <div class="contact contact--address">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+        <div class="contact contact--hours">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="footer__map" href="https://yandex.ru/maps/org/100031773431/" target="_blank" rel="noopener">
+        <img src="assets/img/footer-map.png" width="302" height="171" alt="Клиника на карте: г. Хабаровск, ул. Ленинградская, 53">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

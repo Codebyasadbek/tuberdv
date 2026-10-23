@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Информация для пациентов — клиника «Тубер», Хабаровск</title>
+  <meta name="description" content="Сведения о медицинской организации ООО «Многопрофильная клиника «Тубер»: лицензия, режим работы, условия оказания платных медицинских услуг, цены, врачи, образец договора, контролирующие органы.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="header" data-header>
+    <div class="header__top">
+      <div class="container header__top-inner">
+        <div class="contact contact--phone header__contact">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+
+        <div class="contact contact--address header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+
+        <div class="contact header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+
+        <a class="btn btn--accent header__cta" href="#appointment">Записаться на приём</a>
+
+        <button class="icon-btn header__a11y header__a11y--mobile" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+        <button class="header__burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <img src="assets/icons/burger.svg" width="50" height="12" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container header__main-inner">
+        <button class="icon-btn menu-btn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span class="menu-btn__lines" aria-hidden="true"></span>
+        </button>
+
+        <a class="logo header__logo" href="index.html">
+          <img src="assets/img/logo.png" width="195" height="60" alt="Многопрофильная клиника «Тубер»">
+        </a>
+
+        <nav class="nav header__nav" aria-label="Основное меню">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="o-tsentre.html">О центре</a></li>
+            <li><a class="nav__link" href="vrachi.html">Врачи</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <button class="nav__link nav__toggle" type="button" aria-expanded="false" aria-controls="nav-diagnostics" data-dropdown-toggle>Диагностика</button>
+              <div class="nav__dropdown" id="nav-diagnostics">
+                <ul class="nav__sub">
+                  <li><a class="nav__sub-link" href="uzi.html">УЗИ</a></li>
+                  <li><a class="nav__sub-link" href="flyuorografiya.html">Флюорография</a></li>
+                  <li><a class="nav__sub-link" href="mammografiya.html">Маммография</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="nav__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+            <li><a class="nav__link" href="prajs.html">Цены</a></li>
+            <li><a class="nav__link" href="kontakty.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <button class="icon-btn header__a11y" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+
+        <form class="search header__search" action="prajs.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск" aria-label="Поиск услуги и цены">
+          <button class="search__btn" type="submit" aria-label="Найти">
+            <img src="assets/icons/search.svg" width="21.4715" height="22.4491" alt="">
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Dropdown menu over the page: opened by the burger (mobile) and the square menu button (desktop) -->
+    <nav class="menu" id="site-menu" aria-label="Меню сайта">
+      <ul class="menu__list">
+        <li><a class="menu__link" href="o-tsentre.html">О центре</a></li>
+        <li><a class="menu__link" href="index.html#services">Услуги</a></li>
+        <li><a class="menu__link" href="vrachi.html">Врачи</a></li>
+        <li>
+          <span class="menu__heading">Диагностика</span>
+          <ul class="menu__sub">
+            <li><a class="menu__link menu__link--sub" href="uzi.html">УЗИ</a></li>
+            <li><a class="menu__link menu__link--sub" href="flyuorografiya.html">Флюорография</a></li>
+            <li><a class="menu__link menu__link--sub" href="mammografiya.html">Маммография</a></li>
+          </ul>
+        </li>
+        <li><a class="menu__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+        <li><a class="menu__link" href="prajs.html">Цены</a></li>
+        <li><a class="menu__link" href="informatsiya-dlya-patsientov.html" aria-current="page">Информация для пациентов</a></li>
+        <li><a class="menu__link" href="kontakty.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero page-hero--simple">
+      <div class="container page-hero__inner">
+      <nav class="breadcrumbs" aria-label="Навигационная цепочка">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item"><span aria-current="page">Информация для пациентов</span></li>
+        </ol>
+      </nav>
+        <div class="page-hero__content">
+          <h1 class="page-hero__title">Информация для пациентов</h1>
+          <p class="page-hero__lead">Сведения, которые медицинская организация обязана довести до пациентов (Правила предоставления платных медицинских услуг, утв. постановлением Правительства РФ от 11.05.2023 № 736).</p>
+        </div>
+      </div>
+    </section>
+
+    <nav class="page-nav page-nav--list" aria-label="Разделы страницы">
+      <div class="container">
+        <ul class="page-nav__list">
+          <li><a class="page-nav__link" href="#svedeniya">Сведения о медицинской организации</a></li>
+          <li><a class="page-nav__link" href="#litsenziya">Лицензия на медицинскую деятельность</a></li>
+          <li><a class="page-nav__link" href="#rezhim">Режим работы</a></li>
+          <li><a class="page-nav__link" href="#usloviya">Условия и порядок предоставления платных медицинских услуг</a></li>
+          <li><a class="page-nav__link" href="#tseny">Перечень платных медицинских услуг и цены</a></li>
+          <li><a class="page-nav__link" href="#vrachi">Сведения о медицинских работниках</a></li>
+          <li><a class="page-nav__link" href="#dogovor">Образец договора</a></li>
+          <li><a class="page-nav__link" href="#sroki">Сроки ожидания предоставления платных медицинских услуг</a></li>
+          <li><a class="page-nav__link" href="#lgoty">Льготы</a></li>
+          <li><a class="page-nav__link" href="#metody">Методы оказания медицинской помощи, риски и ожидаемые результаты</a></li>
+          <li><a class="page-nav__link" href="#standarty">Стандарты медицинской помощи и клинические рекомендации</a></li>
+          <li><a class="page-nav__link" href="#organy">Контролирующие органы</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="section info-block" id="svedeniya">
+      <div class="container">
+        <h2 class="section__title">Сведения о медицинской организации</h2>
+        <div class="prose">
+          <dl class="info-list">
+            <dt>Полное наименование</dt><dd>Общество с ограниченной ответственностью «Многопрофильная клиника «Тубер»</dd>
+            <dt>Адрес (юридический и почтовый)</dt><dd>680021, Хабаровский край, г. Хабаровск, ул. Ленинградская, д. 53, корпус 1</dd>
+            <dt>ОГРН</dt><dd>1172724002472</dd>
+            <dt>ИНН / КПП</dt><dd>2724218816 / 272401001</dd>
+            <dt>Генеральный директор</dt><dd>Ласькова Л. В.</dd>
+            <dt>Телефон</dt><dd><a href="tel:+74212456000">+7 (4212) 456-000</a>, <a href="tel:+79622204433">+7 (962) 220-44-33</a></dd>
+            <dt>E-mail</dt><dd><a href="mailto:tuber456000@mail.ru">tuber456000@mail.ru</a></dd>
+            <dt>Сайт</dt><dd>tuberdv.ru</dd>
+          </dl>
+          <p>Выписка из единого государственного реестра юридических лиц предоставляется по требованию.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="litsenziya">
+      <div class="container">
+        <h2 class="section__title">Лицензия на медицинскую деятельность</h2>
+        <div class="prose"><p class="notice" data-pending>Раздел заполняется: ждём данные от клиники.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="rezhim">
+      <div class="container">
+        <h2 class="section__title">Режим работы</h2>
+        <div class="prose">
+          <dl class="info-list">
+            <dt>Клиника</dt><dd>ПН–ПТ 8:30–19:00, СБ, ВС — выходной</dd>
+            <dt>Процедурный кабинет</dt><dd>ПН–ПТ 8:30–20:00</dd>
+            <dt>Приём граждан руководителем</dt><dd>Заведующий клиникой ведёт приём по предварительной записи в четверг с 10:00 до 12:00</dd>
+          </dl>
+          <p>График работы врачей уточняйте у администратора по телефону <a href="tel:+74212456000">+7 (4212) 456-000</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="usloviya">
+      <div class="container">
+        <h2 class="section__title">Условия и порядок предоставления платных медицинских услуг</h2>
+        <div class="prose">
+          <p>Платные медицинские услуги оказываются амбулаторно, в пределах видов работ (услуг), указанных в лицензии, в соответствии с прейскурантом.</p>
+          <p>Услуги оказываются по предварительной записи, которую можно сделать по телефону или в клинике. Если потребитель недееспособен, услуги оказываются только в присутствии его законного представителя.</p>
+          <p>Услуги оказываются в разумные сроки с учётом режима работы клиники, графика работы специалистов, характера услуги, медицинских показаний и состояния здоровья пациента.</p>
+          <p>Оплата производится наличными или банковской картой через терминал непосредственно после оказания услуги.</p>
+          <p>Пациент или его законный представитель имеет право на основании письменного заявления получать медицинские документы, отражающие состояние здоровья, их копии и выписки из них (ч. 5 ст. 22 Федерального закона от 21.11.2011 № 323-ФЗ) при предъявлении паспорта либо доверенности, оформленной в соответствии с законодательством.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="tseny">
+      <div class="container">
+        <h2 class="section__title">Перечень платных медицинских услуг и цены</h2>
+        <div class="prose">
+          <p>Полный прейскурант с ценами в рублях — на странице <a href="prajs.html">«Цены»</a>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="vrachi">
+      <div class="container">
+        <h2 class="section__title">Сведения о медицинских работниках</h2>
+        <div class="prose">
+          <p>Специалисты клиники, их стаж и квалификация — на странице <a href="vrachi.html">«Врачи»</a>.</p>
+          <p class="notice" data-pending>Раздел заполняется: ждём данные от клиники.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="dogovor">
+      <div class="container">
+        <h2 class="section__title">Образец договора</h2>
+        <div class="prose">
+          <p><a href="docs/dogovor-obrazets.doc" download>Договор на оказание платных медицинских услуг (образец, .doc)</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="sroki">
+      <div class="container">
+        <h2 class="section__title">Сроки ожидания предоставления платных медицинских услуг</h2>
+        <div class="prose"><p class="notice" data-pending>Раздел заполняется: ждём данные от клиники.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="lgoty">
+      <div class="container">
+        <h2 class="section__title">Льготы</h2>
+        <div class="prose"><p class="notice" data-pending>Раздел заполняется: ждём данные от клиники.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="metody">
+      <div class="container">
+        <h2 class="section__title">Методы оказания медицинской помощи, риски и ожидаемые результаты</h2>
+        <div class="prose"><p class="notice" data-pending>Раздел заполняется: ждём данные от клиники.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="standarty">
+      <div class="container">
+        <h2 class="section__title">Стандарты медицинской помощи и клинические рекомендации</h2>
+        <div class="prose">
+          <p>Медицинские услуги оказываются с учётом стандартов медицинской помощи и на основании клинических рекомендаций:</p>
+          <ul>
+            <li><a href="http://pravo.gov.ru/" target="_blank" rel="noopener">Официальный интернет-портал правовой информации — pravo.gov.ru</a></li>
+            <li><a href="https://cr.minzdrav.gov.ru/" target="_blank" rel="noopener">Рубрикатор клинических рекомендаций Минздрава России — cr.minzdrav.gov.ru</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section info-block" id="organy">
+      <div class="container">
+        <h2 class="section__title">Контролирующие органы</h2>
+        <div class="prose">
+          <dl class="info-list">
+            <dt>Министерство здравоохранения Хабаровского края</dt><dd>680000, г. Хабаровск, ул. Муравьёва-Амурского, 32. Телефон: +7 (4212) 40-23-22</dd>
+            <dt>Территориальный орган Росздравнадзора по Хабаровскому краю</dt><dd>680000, г. Хабаровск, ул. Петра Комарова, 6, офис 104. Телефоны: +7 (4212) 75-22-30, 75-22-26. <a href="https://27reg.roszdravnadzor.gov.ru/" target="_blank" rel="noopener">27reg.roszdravnadzor.gov.ru</a></dd>
+            <dt>Управление Роспотребнадзора по Хабаровскому краю</dt><dd>680009, г. Хабаровск, ул. Карла Маркса, 109б. Телефон: +7 (4212) 27-47-44. <a href="https://27.rospotrebnadzor.ru/" target="_blank" rel="noopener">27.rospotrebnadzor.ru</a></dd>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section appointment" id="appointment">
+      <div class="container">
+        <div class="appointment__box">
+          <div class="appointment__intro">
+            <h2 class="appointment__title">Запишитесь на приём</h2>
+            <p class="appointment__text">Оставьте свой номер телефона — мы перезвоним.</p>
+            <p class="appointment__text appointment__text--wide">Ответим на вопросы, подберём удобное время и запишем на приём</p>
+          </div>
+
+          <form class="form appointment__form" action="send.php" method="post" data-booking-form>
+            <input class="form__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name" aria-label="Имя" required>
+            <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" inputmode="tel" aria-label="Телефон" required>
+            <label class="form__consent">
+              <input class="form__checkbox" type="checkbox" name="consent" required>
+              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="reglament-o-zashchite-dannykh.html">Политикой в отношении обработки персональных данных</a> и даю <a href="soglasie-na-obrabotku-dannykh.html">Согласие на обработку персональных данных</a></span>
+            </label>
+            <button class="btn btn--primary form__submit" type="submit">Записаться на приём</button>
+            <p class="form__status" role="status" data-form-status hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <img src="assets/img/logo.png" width="164" height="50" alt="Многопрофильная клиника «Тубер»">
+        </a>
+        <a class="btn btn--accent footer__btn" href="#appointment">Консультация</a>
+      </div>
+
+      <nav class="footer__nav" aria-label="Меню в подвале">
+        <ul class="footer__menu">
+          <li><a href="vrachi.html">Врачи</a></li>
+          <li><a href="index.html#services">Отделения</a></li>
+          <li><a href="prajs.html">Цены</a></li>
+        </ul>
+        <ul class="footer__menu">
+          <li><a href="kontakty.html">Контакты</a></li>
+          <li><a href="informatsiya-dlya-patsientov.html">Документы</a></li>
+          <li><a href="karta-sajta.html">Карта сайта</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contacts">
+        <div class="contact contact--phone">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+        <div class="contact contact--address">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+        <div class="contact contact--hours">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="footer__map" href="https://yandex.ru/maps/org/100031773431/" target="_blank" rel="noopener">
+        <img src="assets/img/footer-map.png" width="302" height="171" alt="Клиника на карте: г. Хабаровск, ул. Ленинградская, 53">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

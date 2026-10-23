@@ -63,20 +63,20 @@
 
         <nav class="nav header__nav" aria-label="Основное меню">
           <ul class="nav__list">
-            <li><a class="nav__link" href="/o-tsentre">О центре</a></li>
-            <li><a class="nav__link" href="/vrachi">Врачи</a></li>
+            <li><a class="nav__link" href="o-tsentre.html">О центре</a></li>
+            <li><a class="nav__link" href="vrachi.html">Врачи</a></li>
             <li class="nav__item nav__item--dropdown">
               <button class="nav__link nav__toggle" type="button" aria-expanded="false" aria-controls="nav-diagnostics" data-dropdown-toggle>Диагностика</button>
               <div class="nav__dropdown" id="nav-diagnostics">
                 <ul class="nav__sub">
                   <li><a class="nav__sub-link" href="uzi.html">УЗИ</a></li>
-                  <li><a class="nav__sub-link" href="flyuorografiya.html">Флюорография</a></li>
+                  <li><a class="nav__sub-link" href="flyuorografiya.html" aria-current="page">Флюорография</a></li>
                   <li><a class="nav__sub-link" href="mammografiya.html">Маммография</a></li>
                 </ul>
               </div>
             </li>
-            <li><a class="nav__link" href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
-            <li><a class="nav__link" href="/prajs">Цены</a></li>
+            <li><a class="nav__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+            <li><a class="nav__link" href="prajs.html">Цены</a></li>
             <li><a class="nav__link" href="kontakty.html">Контакты</a></li>
           </ul>
         </nav>
@@ -85,8 +85,8 @@
           <img src="assets/icons/eye.svg" width="26" height="26" alt="">
         </button>
 
-        <form class="search header__search" action="/" method="get" role="search">
-          <input class="search__input" type="search" name="s" placeholder="Поиск" aria-label="Поиск по сайту">
+        <form class="search header__search" action="prajs.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск" aria-label="Поиск услуги и цены">
           <button class="search__btn" type="submit" aria-label="Найти">
             <img src="assets/icons/search.svg" width="21.4715" height="22.4491" alt="">
           </button>
@@ -97,20 +97,20 @@
     <!-- Dropdown menu over the page: opened by the burger (mobile) and the square menu button (desktop) -->
     <nav class="menu" id="site-menu" aria-label="Меню сайта">
       <ul class="menu__list">
-        <li><a class="menu__link" href="/o-tsentre">О центре</a></li>
-        <li><a class="menu__link" href="/uslugi">Услуги</a></li>
-        <li><a class="menu__link" href="/vrachi">Врачи</a></li>
+        <li><a class="menu__link" href="o-tsentre.html">О центре</a></li>
+        <li><a class="menu__link" href="index.html#services">Услуги</a></li>
+        <li><a class="menu__link" href="vrachi.html">Врачи</a></li>
         <li>
           <span class="menu__heading">Диагностика</span>
           <ul class="menu__sub">
             <li><a class="menu__link menu__link--sub" href="uzi.html">УЗИ</a></li>
-            <li><a class="menu__link menu__link--sub" href="flyuorografiya.html">Флюорография</a></li>
+            <li><a class="menu__link menu__link--sub" href="flyuorografiya.html" aria-current="page">Флюорография</a></li>
             <li><a class="menu__link menu__link--sub" href="mammografiya.html">Маммография</a></li>
           </ul>
         </li>
-        <li><a class="menu__link" href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
-        <li><a class="menu__link" href="/prajs">Цены</a></li>
-        <li><a class="menu__link" href="/informatsiya-dlya-patsientov">Информация для пациентов</a></li>
+        <li><a class="menu__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+        <li><a class="menu__link" href="prajs.html">Цены</a></li>
+        <li><a class="menu__link" href="informatsiya-dlya-patsientov.html">Информация для пациентов</a></li>
         <li><a class="menu__link" href="kontakty.html">Контакты</a></li>
       </ul>
     </nav>
@@ -203,14 +203,16 @@
             <p class="appointment__text appointment__text--wide">Ответим на вопросы, подберём удобное время и запишем на приём</p>
           </div>
 
-          <form class="form appointment__form" action="#" method="post">
+          <form class="form appointment__form" action="send.php" method="post" data-booking-form>
+            <input class="form__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name" aria-label="Имя" required>
             <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" inputmode="tel" aria-label="Телефон" required>
             <label class="form__consent">
               <input class="form__checkbox" type="checkbox" name="consent" required>
-              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="/reglament-o-zashchite-dannykh">Политикой в отношении обработки персональных данных</a> и даю <a href="/soglasie-na-obrabotku-dannykh">Согласие на обработку персональных данных</a></span>
+              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="reglament-o-zashchite-dannykh.html">Политикой в отношении обработки персональных данных</a> и даю <a href="soglasie-na-obrabotku-dannykh.html">Согласие на обработку персональных данных</a></span>
             </label>
             <button class="btn btn--primary form__submit" type="submit">Записаться на приём</button>
+            <p class="form__status" role="status" data-form-status hidden></p>
           </form>
         </div>
       </div>
@@ -228,14 +230,14 @@
 
       <nav class="footer__nav" aria-label="Меню в подвале">
         <ul class="footer__menu">
-          <li><a href="/vrachi">Врачи</a></li>
-          <li><a href="/otdeleniya">Отделения</a></li>
-          <li><a href="/prajs">Цены</a></li>
+          <li><a href="vrachi.html">Врачи</a></li>
+          <li><a href="index.html#services">Отделения</a></li>
+          <li><a href="prajs.html">Цены</a></li>
         </ul>
         <ul class="footer__menu">
           <li><a href="kontakty.html">Контакты</a></li>
-          <li><a href="/dokumenty">Документы</a></li>
-          <li><a href="/karta-sajta">Карта сайта</a></li>
+          <li><a href="informatsiya-dlya-patsientov.html">Документы</a></li>
+          <li><a href="karta-sajta.html">Карта сайта</a></li>
         </ul>
       </nav>
 
@@ -263,7 +265,7 @@
         </div>
       </div>
 
-      <a class="footer__map" href="https://yandex.ru/maps/?text=Хабаровск, ул. Ленинградская, 53" target="_blank" rel="noopener">
+      <a class="footer__map" href="https://yandex.ru/maps/org/100031773431/" target="_blank" rel="noopener">
         <img src="assets/img/footer-map.png" width="302" height="171" alt="Клиника на карте: г. Хабаровск, ул. Ленинградская, 53">
       </a>
     </div>

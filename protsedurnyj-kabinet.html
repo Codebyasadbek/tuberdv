@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Процедурный кабинет в Хабаровске — уколы, капельницы, цены | Клиника «Тубер»</title>
+  <meta name="description" content="Процедурный кабинет клиники «Тубер» в Хабаровске: внутривенные и внутримышечные инъекции, капельницы. Цены, режим работы ПН–ПТ 8:30–20:00.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Noto+Sans:wght@400;700&family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="header" data-header>
+    <div class="header__top">
+      <div class="container header__top-inner">
+        <div class="contact contact--phone header__contact">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+
+        <div class="contact contact--address header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+
+        <div class="contact header__contact header__contact--desktop">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+
+        <a class="btn btn--accent header__cta" href="#appointment">Записаться на приём</a>
+
+        <button class="icon-btn header__a11y header__a11y--mobile" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+        <button class="header__burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <img src="assets/icons/burger.svg" width="50" height="12" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="header__main">
+      <div class="container header__main-inner">
+        <button class="icon-btn menu-btn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="site-menu" data-menu-toggle>
+          <span class="menu-btn__lines" aria-hidden="true"></span>
+        </button>
+
+        <a class="logo header__logo" href="index.html">
+          <img src="assets/img/logo.png" width="195" height="60" alt="Многопрофильная клиника «Тубер»">
+        </a>
+
+        <nav class="nav header__nav" aria-label="Основное меню">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="o-tsentre.html">О центре</a></li>
+            <li><a class="nav__link" href="vrachi.html">Врачи</a></li>
+            <li class="nav__item nav__item--dropdown">
+              <button class="nav__link nav__toggle" type="button" aria-expanded="false" aria-controls="nav-diagnostics" data-dropdown-toggle>Диагностика</button>
+              <div class="nav__dropdown" id="nav-diagnostics">
+                <ul class="nav__sub">
+                  <li><a class="nav__sub-link" href="uzi.html">УЗИ</a></li>
+                  <li><a class="nav__sub-link" href="flyuorografiya.html">Флюорография</a></li>
+                  <li><a class="nav__sub-link" href="mammografiya.html">Маммография</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a class="nav__link" href="protsedurnyj-kabinet.html" aria-current="page">Процедурный кабинет</a></li>
+            <li><a class="nav__link" href="prajs.html">Цены</a></li>
+            <li><a class="nav__link" href="kontakty.html">Контакты</a></li>
+          </ul>
+        </nav>
+
+        <button class="icon-btn header__a11y" type="button" aria-label="Версия для слабовидящих">
+          <img src="assets/icons/eye.svg" width="26" height="26" alt="">
+        </button>
+
+        <form class="search header__search" action="prajs.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск" aria-label="Поиск услуги и цены">
+          <button class="search__btn" type="submit" aria-label="Найти">
+            <img src="assets/icons/search.svg" width="21.4715" height="22.4491" alt="">
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Dropdown menu over the page: opened by the burger (mobile) and the square menu button (desktop) -->
+    <nav class="menu" id="site-menu" aria-label="Меню сайта">
+      <ul class="menu__list">
+        <li><a class="menu__link" href="o-tsentre.html">О центре</a></li>
+        <li><a class="menu__link" href="index.html#services">Услуги</a></li>
+        <li><a class="menu__link" href="vrachi.html">Врачи</a></li>
+        <li>
+          <span class="menu__heading">Диагностика</span>
+          <ul class="menu__sub">
+            <li><a class="menu__link menu__link--sub" href="uzi.html">УЗИ</a></li>
+            <li><a class="menu__link menu__link--sub" href="flyuorografiya.html">Флюорография</a></li>
+            <li><a class="menu__link menu__link--sub" href="mammografiya.html">Маммография</a></li>
+          </ul>
+        </li>
+        <li><a class="menu__link" href="protsedurnyj-kabinet.html" aria-current="page">Процедурный кабинет</a></li>
+        <li><a class="menu__link" href="prajs.html">Цены</a></li>
+        <li><a class="menu__link" href="informatsiya-dlya-patsientov.html">Информация для пациентов</a></li>
+        <li><a class="menu__link" href="kontakty.html">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+      <nav class="breadcrumbs" aria-label="Навигационная цепочка">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item"><a href="index.html#services">Услуги</a></li>
+          <li class="breadcrumbs__item"><span aria-current="page">Процедурный кабинет</span></li>
+        </ol>
+      </nav>
+        <div class="page-hero__content">
+          <h1 class="page-hero__title">Процедурный кабинет</h1>
+          <ul class="page-hero__list">
+          <li>Внутривенные и внутримышечные инъекции</li>
+          <li>Капельницы</li>
+          <li>ПН–ПТ 8:30–20:00</li>
+          </ul>
+          <a class="btn btn--primary page-hero__btn" href="#appointment">Записаться в процедурный кабинет</a>
+        </div>
+        <img class="page-hero__image" src="assets/img/gallery/clinic-10.jpg" width="1200" height="675" alt="Процедурный кабинет клиники «Тубер»">
+      </div>
+    </section>
+
+    <section class="section prices" id="ceny">
+      <div class="container">
+        <h2 class="section__title">Цены на услуги</h2>
+        <div class="price-tabs" data-price-tabs>
+          <div class="price-tabs__list" role="tablist" aria-label="Прайс по врачам">
+          <button class="price-tabs__tab" type="button" role="tab" id="tab-procedure" aria-controls="price-procedure" aria-selected="true">Процедурный кабинет</button>
+          </div>
+        <div class="price-tabs__panel" role="tabpanel" id="price-procedure" aria-labelledby="tab-procedure">
+          <div class="price-table__wrap">
+            <table class="price-table">
+              <thead>
+                <tr><th scope="col">Медицинская услуга</th><th scope="col">Стоимость</th></tr>
+              </thead>
+              <tbody>
+                <tr data-price-row><td>Внутривенная инъекция капельно</td><td>550 ₽</td></tr>
+                <tr data-price-row><td>Внутривенная инъекция капельно 1 в/в струйно в систему</td><td>670 ₽</td></tr>
+                <tr data-price-row><td>Внутривенная инъекция капельно 2 в/в струйно в систему</td><td>770 ₽</td></tr>
+                <tr data-price-row><td>Инъекция внутривенная струйно</td><td>300 ₽</td></tr>
+                <tr data-price-row><td>Инъекция внутримышечная</td><td>200 ₽</td></tr>
+                <tr data-price-row><td>Инъекция внутримышечная х2</td><td>300 ₽</td></tr>
+                <tr data-price-row><td>Инъекция подкожная</td><td>200 ₽</td></tr>
+                <tr data-price-row><td>Внутривенное вливание струйное 3 препарата (без стоимости препарата)</td><td>510 ₽</td></tr>
+                <tr data-price-row><td>Внутримышечная инъекция (без стоимости препарата)</td><td>150 ₽</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="price-tabs__empty" data-price-empty hidden>Ничего не найдено. Уточните название услуги или позвоните нам.</p>
+        </div>
+        </div>
+        <p class="prices__note">Инъекции и внутривенные вливания проводятся по назначению специалиста или при наличии необходимых документов. Условия проведения уточняйте при записи.</p>
+      </div>
+    </section>
+
+    <section class="section appointment" id="appointment">
+      <div class="container">
+        <div class="appointment__box">
+          <div class="appointment__intro">
+            <h2 class="appointment__title">Запишитесь на приём</h2>
+            <p class="appointment__text">Оставьте свой номер телефона — мы перезвоним.</p>
+            <p class="appointment__text appointment__text--wide">Ответим на вопросы, подберём удобное время и запишем на приём</p>
+          </div>
+
+          <form class="form appointment__form" action="send.php" method="post" data-booking-form>
+            <input class="form__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name" aria-label="Имя" required>
+            <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" inputmode="tel" aria-label="Телефон" required>
+            <label class="form__consent">
+              <input class="form__checkbox" type="checkbox" name="consent" required>
+              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="reglament-o-zashchite-dannykh.html">Политикой в отношении обработки персональных данных</a> и даю <a href="soglasie-na-obrabotku-dannykh.html">Согласие на обработку персональных данных</a></span>
+            </label>
+            <button class="btn btn--primary form__submit" type="submit">Записаться на приём</button>
+            <p class="form__status" role="status" data-form-status hidden></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo" href="index.html">
+          <img src="assets/img/logo.png" width="164" height="50" alt="Многопрофильная клиника «Тубер»">
+        </a>
+        <a class="btn btn--accent footer__btn" href="#appointment">Консультация</a>
+      </div>
+
+      <nav class="footer__nav" aria-label="Меню в подвале">
+        <ul class="footer__menu">
+          <li><a href="vrachi.html">Врачи</a></li>
+          <li><a href="index.html#services">Отделения</a></li>
+          <li><a href="prajs.html">Цены</a></li>
+        </ul>
+        <ul class="footer__menu">
+          <li><a href="kontakty.html">Контакты</a></li>
+          <li><a href="informatsiya-dlya-patsientov.html">Документы</a></li>
+          <li><a href="karta-sajta.html">Карта сайта</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__contacts">
+        <div class="contact contact--phone">
+          <img class="contact__icon" src="assets/icons/phone.svg" width="35" height="35" alt="">
+          <div class="contact__text contact__text--bold">
+            <a href="tel:+74212456000">+7 (4212) 456-000</a>
+            <a href="tel:+79622204433">+7 (962) 220-44-33</a>
+          </div>
+        </div>
+        <div class="contact contact--address">
+          <img class="contact__icon" src="assets/icons/location.svg" width="26.7253" height="34" alt="">
+          <address class="contact__text">
+            <span>г. Хабаровск</span>
+            <span>ул. Ленинградская, 53</span>
+          </address>
+        </div>
+        <div class="contact contact--hours">
+          <img class="contact__icon" src="assets/icons/clock.svg" width="34" height="34" alt="">
+          <div class="contact__text">
+            <span class="contact__hours">8:30-19:00</span>
+            <span class="contact__note">СБ, ВС- выходной</span>
+          </div>
+        </div>
+      </div>
+
+      <a class="footer__map" href="https://yandex.ru/maps/org/100031773431/" target="_blank" rel="noopener">
+        <img src="assets/img/footer-map.png" width="302" height="171" alt="Клиника на карте: г. Хабаровск, ул. Ленинградская, 53">
+      </a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

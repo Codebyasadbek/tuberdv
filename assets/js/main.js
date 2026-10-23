@@ -105,6 +105,13 @@
       document.querySelectorAll("[data-price-empty]").forEach((note) => {
         note.hidden = [...note.parentElement.querySelectorAll("[data-price-row]")].some((row) => !row.hidden);
       });
+      // Prices page: hide the sections with nothing found, and say so when nothing is found at all
+      const sections = [...document.querySelectorAll("[data-price-section]")];
+      sections.forEach((section) => {
+        section.hidden = terms.length > 0 && ![...section.querySelectorAll("[data-price-row]")].some((row) => !row.hidden);
+      });
+      const emptyAll = document.querySelector("[data-search-empty]");
+      if (emptyAll) emptyAll.hidden = !sections.length || sections.some((section) => !section.hidden);
       clear.hidden = !input.value;
     };
 
@@ -133,6 +140,42 @@
       filter([], true);
       input.focus();
     });
+  }
+
+  /* ---------- Booking form: sends the request to send.php without leaving the page ---------- */
+  document.querySelectorAll("[data-booking-form]").forEach((form) => {
+    const status = form.querySelector("[data-form-status]");
+    const button = form.querySelector('[type="submit"]');
+    const show = (text, kind) => {
+      status.hidden = false;
+      status.textContent = text;
+      status.className = `form__status${kind ? ` form__status--${kind}` : ""}`;
+    };
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      button.disabled = true;
+      show("Отправляем…");
+      try {
+        const response = await fetch(form.action, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
+        const result = await response.json();
+        if (!response.ok || !result.ok) throw new Error(result.error || "send failed");
+        form.reset();
+        show("Спасибо! Заявка отправлена, администратор перезвонит вам в рабочее время.", "ok");
+      } catch {
+        show("Не удалось отправить заявку. Позвоните нам: +7 (4212) 456-000.", "error");
+      } finally {
+        button.disabled = false;
+      }
+    });
+  });
+
+  /* ---------- Search from the header lands on the prices page with ?q= ---------- */
+  const query = new URLSearchParams(location.search).get("q");
+  const searchInput = document.querySelector("[data-service-search] input");
+  if (query && searchInput) {
+    searchInput.value = query;
+    searchInput.dispatchEvent(new Event("input"));
   }
 
   /* ---------- Sliders (Swiper) ---------- */
@@ -164,6 +207,21 @@
         },
       });
       doctors.classList.toggle("is-locked", doctorsSwiper.isLocked);
+    }
+
+    const gallery = document.querySelector("[data-gallery-slider]");
+    if (gallery) {
+      new Swiper(gallery, {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        grabCursor: true,
+        watchOverflow: true,
+        navigation: {
+          prevEl: document.querySelector("[data-gallery-prev]"),
+          nextEl: document.querySelector("[data-gallery-next]"),
+        },
+        breakpoints: { 1024: { spaceBetween: 20 } },
+      });
     }
 
     const documents = document.querySelector("[data-documents-slider]");

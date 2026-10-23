@@ -63,8 +63,8 @@
 
         <nav class="nav header__nav" aria-label="Основное меню">
           <ul class="nav__list">
-            <li><a class="nav__link" href="/o-tsentre">О центре</a></li>
-            <li><a class="nav__link" href="/vrachi">Врачи</a></li>
+            <li><a class="nav__link" href="o-tsentre.html">О центре</a></li>
+            <li><a class="nav__link" href="vrachi.html">Врачи</a></li>
             <li class="nav__item nav__item--dropdown">
               <button class="nav__link nav__toggle" type="button" aria-expanded="false" aria-controls="nav-diagnostics" data-dropdown-toggle>Диагностика</button>
               <div class="nav__dropdown" id="nav-diagnostics">
@@ -75,8 +75,8 @@
                 </ul>
               </div>
             </li>
-            <li><a class="nav__link" href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
-            <li><a class="nav__link" href="/prajs">Цены</a></li>
+            <li><a class="nav__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+            <li><a class="nav__link" href="prajs.html">Цены</a></li>
             <li><a class="nav__link" href="kontakty.html">Контакты</a></li>
           </ul>
         </nav>
@@ -85,8 +85,8 @@
           <img src="assets/icons/eye.svg" width="26" height="26" alt="">
         </button>
 
-        <form class="search header__search" action="/" method="get" role="search">
-          <input class="search__input" type="search" name="s" placeholder="Поиск" aria-label="Поиск по сайту">
+        <form class="search header__search" action="prajs.html" method="get" role="search">
+          <input class="search__input" type="search" name="q" placeholder="Поиск" aria-label="Поиск услуги и цены">
           <button class="search__btn" type="submit" aria-label="Найти">
             <img src="assets/icons/search.svg" width="21.4715" height="22.4491" alt="">
           </button>
@@ -97,9 +97,9 @@
     <!-- Dropdown menu over the page: opened by the burger (mobile) and the square menu button (desktop) -->
     <nav class="menu" id="site-menu" aria-label="Меню сайта">
       <ul class="menu__list">
-        <li><a class="menu__link" href="/o-tsentre">О центре</a></li>
-        <li><a class="menu__link" href="/uslugi">Услуги</a></li>
-        <li><a class="menu__link" href="/vrachi">Врачи</a></li>
+        <li><a class="menu__link" href="o-tsentre.html">О центре</a></li>
+        <li><a class="menu__link" href="index.html#services">Услуги</a></li>
+        <li><a class="menu__link" href="vrachi.html">Врачи</a></li>
         <li>
           <span class="menu__heading">Диагностика</span>
           <ul class="menu__sub">
@@ -108,9 +108,9 @@
             <li><a class="menu__link menu__link--sub" href="mammografiya.html">Маммография</a></li>
           </ul>
         </li>
-        <li><a class="menu__link" href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
-        <li><a class="menu__link" href="/prajs">Цены</a></li>
-        <li><a class="menu__link" href="/informatsiya-dlya-patsientov">Информация для пациентов</a></li>
+        <li><a class="menu__link" href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
+        <li><a class="menu__link" href="prajs.html">Цены</a></li>
+        <li><a class="menu__link" href="informatsiya-dlya-patsientov.html">Информация для пациентов</a></li>
         <li><a class="menu__link" href="kontakty.html">Контакты</a></li>
       </ul>
     </nav>
@@ -150,7 +150,7 @@
                 <p class="hero__title">ПРИЁМ ВРАЧЕЙ</p>
                 <p class="hero__subtitle">Терапевт, кардиолог, эндокринолог</p>
                 <p class="hero__text">Опытные специалисты<br>в центре города</p>
-                <a class="btn btn--primary hero__btn" href="/vrachi">Узнать больше</a>
+                <a class="btn btn--primary hero__btn" href="vrachi.html">Узнать больше</a>
               </div>
               <img class="hero__image" src="assets/img/hero-doctors.jpg" width="1200" height="742" alt="Приём врача в клинике «Тубер»" loading="lazy">
             </div>
@@ -162,7 +162,7 @@
                 <p class="hero__title">АНАЛИЗЫ</p>
                 <p class="hero__subtitle">Более 300 видов анализов</p>
                 <p class="hero__text">Быстро и без очередей<br>Запишитесь уже сегодня</p>
-                <a class="btn btn--primary hero__btn" href="/uslugi">Узнать больше</a>
+                <a class="btn btn--primary hero__btn" href="#appointment">Записаться</a>
               </div>
               <img class="hero__image" src="assets/img/hero-analyses.jpg" width="1200" height="742" alt="Регистратура клиники «Тубер»" loading="lazy">
             </div>
@@ -198,27 +198,27 @@
               <li><a href="mammografiya.html">Маммография</a></li>
               <li><a href="flyuorografiya.html">Флюорография</a></li>
               <li><a href="uzi.html">УЗИ</a></li>
-              <li><a href="/diagnostika/ekg">ЭКГ</a></li>
-              <li><a href="/analizy">Анализы</a></li>
-              <li><a href="/protsedurnyj-kabinet">Процедурный кабинет</a></li>
+              <li><a href="prajs.html#ekg">ЭКГ</a></li>
+              <li>Анализы</li>
+              <li><a href="protsedurnyj-kabinet.html">Процедурный кабинет</a></li>
             </ul>
             <p class="services__subtitle">Приём ведут специалисты:</p>
             <ul class="services__list">
-              <li><a href="/vrachi/infektsionist">Инфекционист</a></li>
-              <li><a href="/vrachi/kardiolog">Кардиолог</a></li>
-              <li><a href="/vrachi/nejrokhirurg">Нейрохирург</a></li>
-              <li><a href="/vrachi/terapevt">Терапевт</a></li>
-              <li><a href="/vrachi/endokrinolog">Эндокринолог</a></li>
-              <li><a href="/vrachi/rentgenolog">Рентгенолог</a></li>
-              <li><a href="/vrachi/uzi">Врач УЗИ</a></li>
+              <li><a href="vrachi.html#makarova">Инфекционист</a></li>
+              <li><a href="vrachi.html#rachinskaya">Кардиолог</a></li>
+              <li><a href="vrachi.html#kovtun">Нейрохирург</a></li>
+              <li><a href="vrachi.html#akhtyrskaya">Терапевт</a></li>
+              <li><a href="vrachi.html#tagryt">Эндокринолог</a></li>
+              <li><a href="vrachi.html#khotchenkov">Рентгенолог</a></li>
+              <li><a href="uzi.html#vrachi">Врач УЗИ</a></li>
             </ul>
           </div>
 
           <button class="services__tab" type="button" aria-expanded="false" aria-controls="services-procedure" data-tab>Процедурный кабинет</button>
           <div class="services__panel" id="services-procedure" data-tab-panel hidden>
             <ul class="services__list">
-              <li><a href="/protsedurnyj-kabinet/inektsii">Инъекции</a></li>
-              <li><a href="/protsedurnyj-kabinet/kapelnitsy">Капельницы</a></li>
+              <li><a href="protsedurnyj-kabinet.html">Инъекции</a></li>
+              <li><a href="protsedurnyj-kabinet.html">Капельницы</a></li>
             </ul>
           </div>
         </div>
@@ -231,61 +231,89 @@
 
         <div class="swiper doctors__slider" data-doctors-slider>
           <ul class="swiper-wrapper doctors__list">
+<!-- doctors:start -->
             <li class="swiper-slide doctor-card">
-              <img class="doctor-card__photo" src="assets/img/doctors/doctor-1.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
-              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
-              <p class="doctor-card__position">Врач-кардиолог</p>
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Ахтырская</span> <span>Лариса Викторовна</span></h3>
+              <p class="doctor-card__position">Врач-терапевт</p>
               <ul class="doctor-card__facts">
                 <li>высшая категория</li>
-                <li>опыт работы более 20 лет</li>
+                <li>стаж более 33 лет</li>
               </ul>
-              <p class="doctor-card__price">Цена приёма от 2500 р</p>
-              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+              <p class="doctor-card__price">Цена приёма от 2 500 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
             </li>
             <li class="swiper-slide doctor-card">
-              <img class="doctor-card__photo" src="assets/img/doctors/doctor-2.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
-              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
-              <p class="doctor-card__position">Врач-кардиолог</p>
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Ковтун</span> <span>Максим Александрович</span></h3>
+              <p class="doctor-card__position">Врач-нейрохирург</p>
               <ul class="doctor-card__facts">
                 <li>высшая категория</li>
-                <li>опыт работы более 20 лет</li>
+                <li>стаж более 18 лет</li>
               </ul>
-              <p class="doctor-card__price">Цена приёма от 2500 р</p>
-              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+              <p class="doctor-card__price">Цена приёма от 3 000 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
             </li>
             <li class="swiper-slide doctor-card">
-              <img class="doctor-card__photo" src="assets/img/doctors/doctor-3.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
-              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
-              <p class="doctor-card__position">Врач-кардиолог</p>
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Тагрыт</span> <span>Ирина Владимировна</span></h3>
+              <p class="doctor-card__position">Врач-эндокринолог</p>
               <ul class="doctor-card__facts">
+                <li>кандидат медицинских наук</li>
                 <li>высшая категория</li>
-                <li>опыт работы более 20 лет</li>
+                <li>стаж более 22 лет</li>
               </ul>
-              <p class="doctor-card__price">Цена приёма от 2500 р</p>
-              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+              <p class="doctor-card__price">Цена приёма от 3 500 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
             </li>
             <li class="swiper-slide doctor-card">
-              <img class="doctor-card__photo" src="assets/img/doctors/doctor-4.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
-              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
-              <p class="doctor-card__position">Врач-кардиолог</p>
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Макарова</span> <span>Татьяна Евгеньевна</span></h3>
+              <p class="doctor-card__position">Врач-инфекционист</p>
               <ul class="doctor-card__facts">
-                <li>высшая категория</li>
-                <li>опыт работы более 20 лет</li>
+                <li>кандидат медицинских наук</li>
+                <li>профессор кафедры медицинского института</li>
+                <li>стаж более 30 лет</li>
               </ul>
-              <p class="doctor-card__price">Цена приёма от 2500 р</p>
-              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+              <p class="doctor-card__price">Цена приёма от 3 500 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
             </li>
             <li class="swiper-slide doctor-card">
-              <img class="doctor-card__photo" src="assets/img/doctors/doctor-5.jpg" width="223" height="300" alt="Иванов Иван Иванович, врач-кардиолог" loading="lazy">
-              <h3 class="doctor-card__name"><span>Иванов</span> <span>Иван Иванович</span></h3>
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Рачинская</span> <span>Александра Александровна</span></h3>
               <p class="doctor-card__position">Врач-кардиолог</p>
               <ul class="doctor-card__facts">
-                <li>высшая категория</li>
-                <li>опыт работы более 20 лет</li>
+                <li>первая категория</li>
+                <li>стаж 9 лет</li>
               </ul>
-              <p class="doctor-card__price">Цена приёма от 2500 р</p>
-              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на прием</a>
+              <p class="doctor-card__price">Цена приёма от 2 700 ₽</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
             </li>
+            <li class="swiper-slide doctor-card">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Хрипкова</span> <span>Елена Алексеевна</span></h3>
+              <p class="doctor-card__position">Врач ультразвуковой диагностики</p>
+              <ul class="doctor-card__facts">
+                <li>стаж 14 лет</li>
+              </ul>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="swiper-slide doctor-card">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Челпанов</span> <span>Владимир Константинович</span></h3>
+              <p class="doctor-card__position">Врач ультразвуковой диагностики</p>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+            <li class="swiper-slide doctor-card">
+              <img class="doctor-card__photo doctor-card__photo--empty" src="assets/img/doctors/no-photo.svg" width="223" height="300" alt="Фото скоро появится" loading="lazy">
+              <h3 class="doctor-card__name"><span>Хотченков</span> <span>Е. М.</span></h3>
+              <p class="doctor-card__position">Врач-рентгенолог</p>
+              <ul class="doctor-card__facts">
+                <li>стаж 4 года</li>
+              </ul>
+              <a class="btn btn--primary doctor-card__btn" href="#appointment">Записаться на приём</a>
+            </li>
+<!-- doctors:end -->
           </ul>
           <img class="doctors__hint" src="assets/icons/swipe-hand.svg" width="40" height="40" alt="">
         </div>
@@ -301,20 +329,22 @@
             <p class="appointment__text appointment__text--wide">Ответим на вопросы, подберём удобное время и запишем на приём</p>
           </div>
 
-          <form class="form appointment__form" action="#" method="post">
+          <form class="form appointment__form" action="send.php" method="post" data-booking-form>
+            <input class="form__trap" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
             <input class="form__input" type="text" name="name" placeholder="Имя" autocomplete="name" aria-label="Имя" required>
             <input class="form__input" type="tel" name="phone" placeholder="Телефон" autocomplete="tel" inputmode="tel" aria-label="Телефон" required>
             <label class="form__consent">
               <input class="form__checkbox" type="checkbox" name="consent" required>
-              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="/reglament-o-zashchite-dannykh">Политикой в отношении обработки персональных данных</a> и даю <a href="/soglasie-na-obrabotku-dannykh">Согласие на обработку персональных данных</a></span>
+              <span>Нажимая на кнопку «Записаться на приём», я подтверждаю, что ознакомлен с <a href="reglament-o-zashchite-dannykh.html">Политикой в отношении обработки персональных данных</a> и даю <a href="soglasie-na-obrabotku-dannykh.html">Согласие на обработку персональных данных</a></span>
             </label>
             <button class="btn btn--primary form__submit" type="submit">Записаться на приём</button>
+            <p class="form__status" role="status" data-form-status hidden></p>
           </form>
         </div>
       </div>
     </section>
 
-    <section class="section documents" id="documents">
+    <section class="section documents" id="documents" hidden>
       <div class="container">
         <h2 class="section__title">Документы</h2>
 
@@ -322,31 +352,8 @@
           <div class="documents__slider">
             <div class="swiper" data-documents-slider>
               <ul class="swiper-wrapper documents__list">
-                <li class="swiper-slide document-card">
-                  <a class="document-card__link" href="assets/img/documents/egrul.jpg" target="_blank" rel="noopener">
-                    <img src="assets/img/documents/egrul.jpg" width="600" height="849" alt="Выписка из ЕГРЮЛ" loading="lazy">
-                  </a>
-                </li>
-                <li class="swiper-slide document-card">
-                  <a class="document-card__link" href="assets/img/documents/poryadok-uslug.jpg" target="_blank" rel="noopener">
-                    <img src="assets/img/documents/poryadok-uslug.jpg" width="600" height="844" alt="Порядок оказания платных медицинских услуг" loading="lazy">
-                  </a>
-                </li>
-                <li class="swiper-slide document-card">
-                  <a class="document-card__link" href="assets/img/documents/license-1.jpg" target="_blank" rel="noopener">
-                    <img src="assets/img/documents/license-1.jpg" width="600" height="832" alt="Лицензия на медицинскую деятельность, страница 1" loading="lazy">
-                  </a>
-                </li>
-                <li class="swiper-slide document-card">
-                  <a class="document-card__link" href="assets/img/documents/license-2.jpg" target="_blank" rel="noopener">
-                    <img src="assets/img/documents/license-2.jpg" width="600" height="832" alt="Лицензия на медицинскую деятельность, страница 2" loading="lazy">
-                  </a>
-                </li>
-                <li class="swiper-slide document-card">
-                  <a class="document-card__link" href="assets/img/documents/license-3.jpg" target="_blank" rel="noopener">
-                    <img src="assets/img/documents/license-3.jpg" width="600" height="832" alt="Лицензия на медицинскую деятельность, страница 3" loading="lazy">
-                  </a>
-                </li>
+<!-- documents:start -->
+<!-- documents:end -->
               </ul>
             </div>
             <div class="documents__nav">
@@ -370,7 +377,7 @@
 
         <ul class="rating__list">
           <li><a class="rating__item" href="#" target="_blank" rel="noopener"><img src="assets/img/rating-prodoctorov.png" width="265" height="140" alt="ПроДокторов — оценка 5"></a></li>
-          <li><a class="rating__item" href="#" target="_blank" rel="noopener"><img src="assets/img/rating-yandex.png" width="262" height="140" alt="Яндекс — оценка 4,9"></a></li>
+          <li><a class="rating__item" href="https://yandex.ru/maps/org/100031773431/reviews/" target="_blank" rel="noopener"><img src="assets/img/rating-yandex.png" width="262" height="140" alt="Яндекс — оценка 4,9"></a></li>
           <li><a class="rating__item" href="#" target="_blank" rel="noopener"><img src="assets/img/rating-napopravku.png" width="263" height="140" alt="НаПоправку — оценка 4,9"></a></li>
         </ul>
       </div>
@@ -398,14 +405,14 @@
 
       <nav class="footer__nav" aria-label="Меню в подвале">
         <ul class="footer__menu">
-          <li><a href="/vrachi">Врачи</a></li>
-          <li><a href="/otdeleniya">Отделения</a></li>
-          <li><a href="/prajs">Цены</a></li>
+          <li><a href="vrachi.html">Врачи</a></li>
+          <li><a href="index.html#services">Отделения</a></li>
+          <li><a href="prajs.html">Цены</a></li>
         </ul>
         <ul class="footer__menu">
           <li><a href="kontakty.html">Контакты</a></li>
-          <li><a href="/dokumenty">Документы</a></li>
-          <li><a href="/karta-sajta">Карта сайта</a></li>
+          <li><a href="informatsiya-dlya-patsientov.html">Документы</a></li>
+          <li><a href="karta-sajta.html">Карта сайта</a></li>
         </ul>
       </nav>
 
@@ -433,7 +440,7 @@
         </div>
       </div>
 
-      <a class="footer__map" href="https://yandex.ru/maps/?text=Хабаровск, ул. Ленинградская, 53" target="_blank" rel="noopener">
+      <a class="footer__map" href="https://yandex.ru/maps/org/100031773431/" target="_blank" rel="noopener">
         <img src="assets/img/footer-map.png" width="302" height="171" alt="Клиника на карте: г. Хабаровск, ул. Ленинградская, 53">
       </a>
     </div>
